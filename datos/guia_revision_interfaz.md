@@ -95,6 +95,8 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Bloque anterior:** cotejada la descripción de la multiherramienta Pyro edición «QV» `item_Descgrin_multitool_01_reward01` con el inglés original. Corregido el párrafo que mezclaba español e inglés y recuperado el apartado de estadísticas de reparación y reciclaje omitido. Se verificaron todas las cifras y los 14 saltos `\n` frente al original; se conservó el nombre propio `QV Planet Services`.
 
-**Último bloque:** cotejadas las descripciones de la Pyro edición `Crusader` y `Hurston` con el inglés original. Traducidas las etiquetas que permanecían en inglés y repuesto el apartado de estadísticas de reparación y reciclaje que faltaba en ambas. Se verificaron las cifras y los 14 saltos `\n` de cada ficha frente al original.
+**Bloque anterior:** cotejadas las descripciones de la Pyro edición `Crusader` y `Hurston` con el inglés original. Traducidas las etiquetas que permanecían en inglés y repuesto el apartado de estadísticas de reparación y reciclaje que faltaba en ambas. Se verificaron las cifras y los 14 saltos `\n` de cada ficha frente al original.
 
-**Siguiente bloque:** revisar las descripciones especiales de la Pyro `ArcCorp` y `microTech`, que presentan las mismas omisiones. Sigue pendiente comprobar en el juego las cabeceras del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
+**Último bloque:** cotejadas las descripciones de la Pyro edición `ArcCorp` y `microTech` con el inglés original. Traducidas las etiquetas que permanecían en inglés y recuperadas las estadísticas técnicas de reparación y reciclaje. Las cifras y los 14 saltos `\n` de cada ficha coinciden con el original; se mantuvieron los nombres de las marcas.
+
+**Siguiente bloque:** revisar las demás variantes de la multiherramienta Pyro y sus accesorios, buscando estadísticas omitidas o errores comprobables. Sigue pendiente comprobar en el juego las cabeceras del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
