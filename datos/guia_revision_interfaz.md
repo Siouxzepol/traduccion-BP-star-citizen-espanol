@@ -53,6 +53,8 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Bloque anterior:** cotejados los 58 mensajes no vacíos `shop_ui_transactionResult_*` con el inglés original. Corregidas seis cadenas: dos mensajes que seguían en inglés, una construcción gramatical incorrecta y tres referencias a «imagen» que en el original designan una instantánea de datos (`snapshot`).
 
-**Último bloque:** cotejadas las 39 cadenas no vacías `shop_ui_item_*` y las 15 `shop_ui_tooltip_*` con el inglés original. Corregidas dos etiquetas de artículos: `TRY ON HAT` y `FASHION TYPE`, esta última diferenciada de `STYLE`. Las ayudas emergentes no requerían cambios comprobables.
+**Bloque anterior:** cotejadas las 39 cadenas no vacías `shop_ui_item_*` y las 15 `shop_ui_tooltip_*` con el inglés original. Corregidas dos etiquetas de artículos: `TRY ON HAT` y `FASHION TYPE`, esta última diferenciada de `STYLE`. Las ayudas emergentes no requerían cambios comprobables.
 
-**Siguiente bloque:** continuar con otras familias de textos de terminales y comercio, incluidas las acciones y mensajes de compra y venta. Sigue pendiente comprobar en el juego las cabeceras del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves. Las coincidencias que quedan con el inglés incluyen nombres propios, abreviaturas, códigos y nombres de minerales que deben conservarse.
+**Último bloque:** cotejados los mensajes `shop_ui_transaction_*`, `shop_ui_resultmsg_*`, `shop_ui_buying_*` y `shop_ui_selling_*` con el inglés original. Corregidas dos cadenas: `buyer account` se refería al comprador, no al destino, y el aviso de almacenamiento alternaba incorrectamente el trato de tú y usted.
+
+**Siguiente bloque:** continuar con otras familias de textos de terminales y comercio, incluidos menús desplegables, navegación y desactivación de botones. Sigue pendiente comprobar en el juego las cabeceras del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves. Las coincidencias que quedan con el inglés incluyen nombres propios, abreviaturas, códigos y nombres de minerales que deben conservarse.
