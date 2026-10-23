@@ -89,6 +89,8 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Bloque anterior:** cotejados los nueve nombres `item_Name_GRIN_refinery_*` con el inglés original y las descripciones ThermoWeave ya revisadas. Corregida la grafía de la marca en los guantes y unificados los cuatro nombres de edición ASD en español, incluido el de la capucha que conservaba «Hood» en inglés. Se mantuvieron la marca `ThermoWeave` y la sigla `ASD`.
 
-**Último bloque:** cotejados con el inglés original los nombres restantes de equipo minero y de refinería `item_Name*Mining*` y `item_Name*Refinery*`. Corregidos dos nombres que aún incluían sustantivos comunes en inglés: «Retired Drill Head» y «Lawson Mining Laser». Se mantuvo «Lawson» como nombre propio y los códigos de modelo intactos.
+**Bloque anterior:** cotejados con el inglés original los nombres restantes de equipo minero y de refinería `item_Name*Mining*` y `item_Name*Refinery*`. Corregidos dos nombres que aún incluían sustantivos comunes en inglés: «Retired Drill Head» y «Lawson Mining Laser». Se mantuvo «Lawson» como nombre propio y los códigos de modelo intactos.
 
-**Siguiente bloque:** buscar otras fichas de herramientas de minería con traducciones parciales fuera de las familias ya cotejadas, usando la descripción inglesa para resolver dudas de sentido. Sigue pendiente comprobar en el juego las cabeceras del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
+**Último bloque:** revisada la familia de accesorios `item_Namegrin_multitool_01_*` de la multiherramienta Pyro con el inglés original y la descripción del cartucho Cambio-Lite. Corregidas tres etiquetas del cartucho SRT: el nombre base había perdido «SRT», la variante vacía seguía en inglés y la llena decía erróneamente «Camiseta». Se mantuvieron los nombres propios y el indicador `,P`.
+
+**Siguiente bloque:** revisar otras familias de accesorios de la multiherramienta y sus descripciones, buscando omisiones o textos parcialmente en inglés. Sigue pendiente comprobar en el juego las cabeceras del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
