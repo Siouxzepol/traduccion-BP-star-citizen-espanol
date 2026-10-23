@@ -29,6 +29,8 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Punto a comprobar:** varias entradas españolas llevan el sufijo `,P` en la clave y el original inglés no. No cambiarlo en masa hasta confirmar su función en el juego. Por ahora se conserva.
 
-**Último bloque:** cotejados los avisos de cabina Crusader, Argo, Esperia y Greycat con el original inglés; corregidos cinco errores claros en cada bloque, relativos a escaneo, daño, bengalas, escudos y radiación. Estos fabricantes comparten esas cadenas de origen. Las demás cadenas dudosas se dejaron intactas hasta poder comprobarlas en el juego.
+**Bloques anteriores:** cotejados los avisos de cabina Crusader, Argo, Esperia y Greycat con el original inglés; corregidos cinco errores claros en cada bloque, relativos a escaneo, daño, bengalas, escudos y radiación. Estos fabricantes comparten esas cadenas de origen.
 
-**Siguiente bloque:** revisar los avisos de cabina de Kruger, manteniendo pendientes las cadenas ambiguas para contrastarlas dentro del juego. Sigue pendiente comprobar en el juego cómo se muestran las parejas enfoque/clase de la tienda de naves y revisar las demás categorías de vehículos. Las coincidencias que quedan con el inglés incluyen nombres propios, abreviaturas, códigos y nombres de minerales que deben conservarse.
+**Último bloque:** cotejados los avisos de cabina Kruger con el original inglés y corregidas 54 cadenas de sentido erróneo o parcialmente sin traducir, sobre todo acoplamiento, aterrizaje, escudos y sistemas. Se conservaron las claves y los marcadores `(sistema)`. Las cadenas ambiguas quedan para comprobación en el juego.
+
+**Siguiente bloque:** revisar los avisos de cabina de Consolidated Outland y Drake, manteniendo pendientes las cadenas ambiguas para contrastarlas dentro del juego. Sigue pendiente comprobar en el juego cómo se muestran las parejas enfoque/clase de la tienda de naves y revisar las demás categorías de vehículos. Las coincidencias que quedan con el inglés incluyen nombres propios, abreviaturas, códigos y nombres de minerales que deben conservarse.
