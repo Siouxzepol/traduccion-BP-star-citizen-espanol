@@ -29,4 +29,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Punto a comprobar:** varias entradas españolas llevan el sufijo `,P` en la clave y el original inglés no. No cambiarlo en masa hasta confirmar su función en el juego. Por ahora se conserva.
 
-**Siguiente bloque:** revisar los avisos de cabina de Crusader y después otros fabricantes; mantener pendientes las cadenas ambiguas para contrastarlas dentro del juego. Sigue pendiente comprobar en el juego cómo se muestran las parejas enfoque/clase de la tienda de naves y revisar las demás categorías de vehículos. Las coincidencias que quedan con el inglés incluyen nombres propios, abreviaturas, códigos y nombres de minerales que deben conservarse.
+**Último bloque:** cotejados los avisos de cabina Crusader con el original inglés; corregidos cinco errores claros de escaneo, daño, bengalas, escudos y radiación. Las demás cadenas dudosas se dejaron intactas hasta poder comprobarlas en el juego.
+
+**Siguiente bloque:** revisar los avisos de cabina de otro fabricante, manteniendo pendientes las cadenas ambiguas para contrastarlas dentro del juego. Sigue pendiente comprobar en el juego cómo se muestran las parejas enfoque/clase de la tienda de naves y revisar las demás categorías de vehículos. Las coincidencias que quedan con el inglés incluyen nombres propios, abreviaturas, códigos y nombres de minerales que deben conservarse.
