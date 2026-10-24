@@ -1,6 +1,6 @@
 # Guía de revisión de la interfaz
 
-Estado: 23/10/2026. Esta guía registra qué pantalla se está revisando; **«parcial» no significa que toda la sección esté terminada**. El catálogo `global.ini` contiene unas 91.000 entradas, incluidas misiones, diálogos, objetos y nombres propios. Que una cadena coincida con el original inglés no demuestra por sí solo que falte traducirla.
+Estado: 24/10/2026. Esta guía registra qué pantalla se está revisando; **«parcial» no significa que toda la sección esté terminada**. El catálogo `global.ini` contiene unas 91.000 entradas, incluidas misiones, diálogos, objetos y nombres propios. Que una cadena coincida con el original inglés no demuestra por sí solo que falte traducirla.
 
 | Sección visible en el juego | Familias principales del catálogo | Estado | Trabajo comprobado |
 | --- | --- | --- | --- |
@@ -157,4 +157,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Último bloque:** localizadas las dos últimas apariciones de «Favorita del Público» en el nombre y la descripción de la maqueta Carrack de 2952. El original dice `Best in Show`; corregidas ambas y ajustada la descripción para reflejar que Takuetsu reprodujo sus dimensiones y detalles con Anvil Aerospace. No se modificaron el año, las marcas ni el tipo de nave. Ninguna de las dos claves contiene variables ni saltos `\n`.
 
-**Siguiente bloque:** pasar a otra familia de artículos o componentes con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
+**PTU 4.10.2 (build 12999338; trabajo del parche llamado 4.10.3 en la conversación):** se extrajo únicamente el `Data/Localization/english/global.ini` del `Data.p4k` local del PTU y se comparó con LIVE y el catálogo español. La comparación detectó 671 claves nuevas respecto a LIVE y 4.209 valores ingleses modificados; el archivo español ya incluye las claves PTU. Traducidas las etiquetas de la plataforma del evento RSI, misión «Ataque en oleadas de naves», 12 adornos de escritorio/estantería, varios nombres de objetos y las clases genéricas de armas, traje, lanzamisiles y rayo tractor. Se conservaron claves y marcas `,P`, así como los nombres de modelos y variantes. Siguiente paso: revisar el resto de las 671 claves nuevas y los textos cambiados respecto a LIVE; después cotejar todo lo nuevo traducido para detectar errores y conservar macros de misión sin cambios. Los BP siguen pospuestos, según lo acordado.
+
+**Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
