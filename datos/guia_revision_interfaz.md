@@ -211,4 +211,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **PTU, trigésimo segundo bloque:** traducidas ocho etiquetas de objetivos de «Op. Salvar Stanton» que seguían en inglés: progreso del terminal, terminales por anular y nave de datos. Se mantuvieron los nombres de misión y el formato de variables `%ls`.
 
+**PTU, trigésimo tercer bloque:** traducidas seis etiquetas de extracción del entorno ASD, transferencia de carga y estado/reparación de la matriz de comunicaciones. Se mantuvieron la sigla `GRX` y las claves; el mensaje de hackeo estilizado no se alteró.
+
 **Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
