@@ -185,4 +185,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **PTU, decimonoveno bloque:** traducidos once rótulos de componentes Drake que seguían en inglés: lanzadores de contramedidas, audio de cabina, sistemas de aterrizaje, asientos de copiloto/piloto, placa de gravedad, afuste de armas, toma de combustible y descripción de montura especial. Se conservaron los modelos Cutlass, Dragonfly, Caterpillar y Herald, además de la marca Flashfire.
 
+**PTU, vigésimo bloque:** traducido `Anvil 1000 Motherboard` como «Placa base (Anvil 1000)», en coherencia con el componente Aegis 1000 ya localizado. Se mantuvieron la clave y la marca `,P`.
+
 **Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
