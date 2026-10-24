@@ -177,4 +177,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **PTU, decimoquinto bloque:** traducidos nueve nombres genéricos de soportes de bombas de Eclipse, Retaliator y Gladiator, además del subtipo `Bomb Rack`, usando «soporte de bombas» como en sus descripciones ya localizadas. Se conservaron fabricantes, modelos, tamaños, capacidades y posiciones delanteras/traseras; los nombres comerciales CST-313 «Castillo» no se modificaron.
 
+**PTU, decimosexto bloque:** traducido el tipo de objeto `Room Life Support` como «Soporte vital de la sala», en coherencia con el tipo existente «Generador de Apoyo a la Vida». Se conservaron la clave y su marca `,P`.
+
 **Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
