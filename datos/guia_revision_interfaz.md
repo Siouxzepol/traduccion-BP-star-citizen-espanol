@@ -105,6 +105,8 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Bloque anterior:** cotejadas las ediciones «Trilladora» y «Mercurio» de la multiherramienta Pyro con el inglés original. Recuperadas las estadísticas omitidas de reparación y reciclaje y corregidas las etiquetas de batería, cadencia y alcance. En ambas fichas se conservaron los 14 saltos `\n` y todas las cifras del original.
 
-**Último bloque:** cotejadas las ediciones Pyro «Espejismo», «Lazo de Sangre» y «Fantasma» con el inglés original. Corregidas las etiquetas de batería, cadencia y alcance, el texto base poco natural y los detalles de color. Estas tres fichas inglesas no incluyen estadísticas, por lo que tampoco se añadieron a la traducción; se conservaron los 10 saltos `\n` de cada una.
+**Bloque anterior:** cotejadas las ediciones Pyro «Espejismo», «Lazo de Sangre» y «Fantasma» con el inglés original. Corregidas las etiquetas de batería, cadencia y alcance, el texto base poco natural y los detalles de color. Estas tres fichas inglesas no incluyen estadísticas, por lo que tampoco se añadieron a la traducción; se conservaron los 10 saltos `\n` de cada una.
 
-**Siguiente bloque:** revisar los accesorios Pyro OxyTorch, LifeGuard, OreBit, Cambio-Lite y TruHold y sus recargas, buscando diferencias de contenido comprobables. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
+**Último bloque:** cotejadas con el inglés original las fichas del accesorio OxyTorch y del cartucho pequeño para Cambio-Lite. La primera omitía que los cortes dejan bordes limpios; la segunda atribuía de forma ambigua el almacenamiento al accesorio y omitía `RYT` del nombre de la multiherramienta. Se conservaron los nombres propios y los 6 y 2 saltos `\n`, respectivamente.
+
+**Siguiente bloque:** continuar con los accesorios Pyro LifeGuard, OreBit, Cambio-Lite y TruHold y la recarga MedGel, buscando diferencias de contenido comprobables. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
