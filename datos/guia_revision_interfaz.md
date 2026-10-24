@@ -117,6 +117,8 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Bloque anterior:** cotejada la edición Cambio «Heartthrob» con el inglés original. Traducidas las etiquetas de tamaño, cadencia y clase, y recuperadas sus estadísticas omitidas de reparación y reciclaje. Se verificaron todas las cifras y los 14 saltos `\n`.
 
-**Último bloque:** cotejados los cartuchos de la Cambio con el inglés original. Corregida la sigla `SRT` en el cartucho grande `item_Descgrin_tool_01_salvage_mag` y precisado que es el cartucho, no la herramienta, el que almacena CMR. La batería conserva «Cambrio» porque así figura en su clave inglesa y no hay base suficiente para alterar ese nombre. Se mantuvieron los dos saltos `\n` del cartucho.
+**Bloque anterior:** cotejados los cartuchos de la Cambio con el inglés original. Corregida la sigla `SRT` en el cartucho grande `item_Descgrin_tool_01_salvage_mag` y precisado que es el cartucho, no la herramienta, el que almacena CMR. La batería conserva «Cambrio» porque así figura en su clave inglesa y no hay base suficiente para alterar ese nombre. Se mantuvieron los dos saltos `\n` del cartucho.
 
-**Siguiente bloque:** revisar la herramienta MaxLift y sus variantes, que parecen carecer de estadísticas presentes en inglés. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
+**Último bloque:** cotejada la ficha de la herramienta MaxLift básica con el inglés original. Corregidas las etiquetas de batería y cadencia, y recuperado el apartado técnico omitido de peso, modo, daño, munición, velocidad y alcance. Se verificaron todas las cifras y los 15 saltos `\n`.
+
+**Siguiente bloque:** revisar las tres variantes MaxLift «AA Transport», «AA Support» y «Keystone», que también carecen de estadísticas presentes en inglés. La variante `MaxLift-II`/«Keelback» tiene una ficha española adicional sin pareja inglesa en este catálogo y deberá tratarse por separado. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
