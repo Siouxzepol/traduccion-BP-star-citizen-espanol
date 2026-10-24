@@ -113,6 +113,8 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Bloque anterior:** cotejados el accesorio TruHold, OreBit y la recarga MedGel con el inglés original. OreBit y MedGel no presentaban diferencias de contenido que exigieran cambio. En TruHold se repuso `RYT` en el nombre de la herramienta y el uso individual del rayo tractor, y se precisó que sirve para colocar objetos. Se conservaron los 6 saltos `\n` del original.
 
-**Último bloque:** cotejada la ficha de la herramienta Cambio `item_Descgrin_salvage_01` con el inglés original. Corregidos el origen de las aleaciones y polímeros (chatarra), la sigla `SRT` y las etiquetas de cartucho y rayo; recuperado el apartado técnico de reparación y reciclaje que faltaba. Se conservaron las cifras y los 12 saltos `\n` del original.
+**Bloque anterior:** cotejada la ficha de la herramienta Cambio `item_Descgrin_salvage_01` con el inglés original. Corregidos el origen de las aleaciones y polímeros (chatarra), la sigla `SRT` y las etiquetas de cartucho y rayo; recuperado el apartado técnico de reparación y reciclaje que faltaba. Se conservaron las cifras y los 12 saltos `\n` del original.
 
-**Siguiente bloque:** revisar la edición Cambio «Heartthrob», los cartuchos y la herramienta MaxLift, que también parecen carecer de estadísticas presentes en inglés. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
+**Último bloque:** cotejada la edición Cambio «Heartthrob» con el inglés original. Traducidas las etiquetas de tamaño, cadencia y clase, y recuperadas sus estadísticas omitidas de reparación y reciclaje. Se verificaron todas las cifras y los 14 saltos `\n`.
+
+**Siguiente bloque:** revisar los cartuchos Cambio y la herramienta MaxLift, que parece carecer de estadísticas presentes en inglés. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
