@@ -111,6 +111,8 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Bloque anterior:** cotejadas las fichas LifeGuard y Cambio-Lite con el inglés original. En LifeGuard se repuso el origen conjunto Greycat/CureLife y el papel de CureLife como fabricante médico. En Cambio-Lite se corrigieron la sigla `SRT`, el modelo `Pyro RYT` y la procedencia de las aleaciones y polímeros: la chatarra, no «el entorno». Se mantuvieron los 6 saltos `\n` de cada ficha.
 
-**Último bloque:** cotejados el accesorio TruHold, OreBit y la recarga MedGel con el inglés original. OreBit y MedGel no presentaban diferencias de contenido que exigieran cambio. En TruHold se repuso `RYT` en el nombre de la herramienta y el uso individual del rayo tractor, y se precisó que sirve para colocar objetos. Se conservaron los 6 saltos `\n` del original.
+**Bloque anterior:** cotejados el accesorio TruHold, OreBit y la recarga MedGel con el inglés original. OreBit y MedGel no presentaban diferencias de contenido que exigieran cambio. En TruHold se repuso `RYT` en el nombre de la herramienta y el uso individual del rayo tractor, y se precisó que sirve para colocar objetos. Se conservaron los 6 saltos `\n` del original.
 
-**Siguiente bloque:** pasar a otra familia de equipo y accesorios del inventario para detectar errores de traducción verificables con el inglés. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
+**Último bloque:** cotejada la ficha de la herramienta Cambio `item_Descgrin_salvage_01` con el inglés original. Corregidos el origen de las aleaciones y polímeros (chatarra), la sigla `SRT` y las etiquetas de cartucho y rayo; recuperado el apartado técnico de reparación y reciclaje que faltaba. Se conservaron las cifras y los 12 saltos `\n` del original.
+
+**Siguiente bloque:** revisar la edición Cambio «Heartthrob», los cartuchos y la herramienta MaxLift, que también parecen carecer de estadísticas presentes en inglés. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
