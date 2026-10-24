@@ -225,4 +225,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **PTU, trigésimo noveno bloque:** traducidos seis tipos genéricos de objetos e interacciones (salsa de soja, persianas, caja de munición, puerta de carga, cuidado personal y rayo tractor). Se mantuvieron las claves y los nombres de producto.
 
+**PTU, cuadragésimo bloque:** traducidos 26 rótulos de complejos mineros de Pyro y Stanton; se conservaron los apellidos, sistemas y designadores A–D.
+
 **Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
