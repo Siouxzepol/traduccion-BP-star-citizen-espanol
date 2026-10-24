@@ -167,4 +167,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **PTU, décimo bloque:** traducidas doce opciones aún inglesas del personalizador del personaje: esclerótica, accesorios de piercing, controles rehacer/restablecer/deshacer, color de raíz y tinte, cicatrices, barba incipiente, matiz y color de puntas. `Pite` se conserva pendiente de contexto suficiente para identificar esa variante de accesorio; se mantuvieron los demás nombres coincidentes entre inglés y español, símbolos, unidades y etiquetas de formato.
 
+**PTU, undécimo bloque:** traducidas 256 cadenas nuevas de subtítulos de voces y reacciones: respuestas breves de PNJ y descripciones de respiración, golpes, gritos, dolor y otras reacciones. Se conservaron los signos angulares que delimitan las indicaciones de sonido, las claves, las variantes de voz y los códigos sin traducción; los planos `[BP]` siguen pospuestos.
+
 **Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
