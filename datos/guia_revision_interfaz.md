@@ -195,4 +195,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **PTU, vigesimocuarto bloque:** traducidas ocho etiquetas de aviónica y audio de cabina cotejadas con el original; se distinguió `ADS Computer` de `Targeting Computer`, actualizando el nombre ADS que estaba confundido con «ordenador de fijado». Se conservaron los códigos, fabricantes y modelos, así como las marcas `,P`.
 
+**PTU, vigesimoquinto bloque:** traducidos 30 rótulos de componentes Vanduul que aún conservaban términos en inglés (propulsores, depósitos, escudos, misiles, portamisiles, asientos, luces, audio y contramedidas), contrastando las naves Labris, Harpago, Vexator, Desolatrix, Tribulator y Falcata con sus nombres localizados. Se mantuvieron códigos, modelos y marcas `,P`. Se normalizó la capitalización de varios nombres Vanduul, se identificó «Spark» en los escudos y se corrigió «Lanzaseñuelos».
+
 **Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
