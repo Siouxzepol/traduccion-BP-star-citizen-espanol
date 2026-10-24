@@ -187,4 +187,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **PTU, vigésimo bloque:** traducido `Anvil 1000 Motherboard` como «Placa base (Anvil 1000)», en coherencia con el componente Aegis 1000 ya localizado. Se mantuvieron la clave y la marca `,P`.
 
+**PTU, vigesimoprimer bloque:** traducidos 19 rótulos de componentes MISC que seguían en inglés —asientos, sistema de aterrizaje, luces, afustes, cápsulas y tomas de combustible, audio de cabina, lanzador de interferencias y autodestrucción—. Las traducciones se cotejaron con el nombre localizado de cada componente; se conservaron marcas, modelos y fabricantes, así como las marcas `,P` de las claves.
+
 **Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
