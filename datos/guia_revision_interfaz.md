@@ -205,4 +205,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **PTU, vigesimonoveno bloque:** cotejadas seis descripciones cortas de propulsores Hammer/Hydra, un radar y un componente de defensa YORM; se alinearon con los nombres españoles del catálogo y se mantuvieron modelos, NBSP y marcas `,P`.
 
+**PTU, trigésimo bloque:** localizadas dos descripciones breves que aún conservaban el orden inglés: CPU de RSI y audio de cabina Xi'an. Se alinearon con los nombres en español y se corrigió además la capitalización de «Xi'an» en el nombre de este último componente; se mantuvieron `CPU` y la marca `,P`.
+
 **Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
