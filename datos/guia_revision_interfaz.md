@@ -121,6 +121,8 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **Bloque anterior:** cotejada la ficha de la herramienta MaxLift básica con el inglés original. Corregidas las etiquetas de batería y cadencia, y recuperado el apartado técnico omitido de peso, modo, daño, munición, velocidad y alcance. Se verificaron todas las cifras y los 15 saltos `\n`.
 
-**Último bloque:** cotejadas las ediciones MaxLift «AA Transport» y «AA Support» con el inglés original. Corregidas las etiquetas de clase, batería y cadencia y recuperado el apartado técnico completo que faltaba en ambas. Se verificaron las cifras y los 17 saltos `\n` de cada ficha.
+**Bloque anterior:** cotejadas las ediciones MaxLift «AA Transport» y «AA Support» con el inglés original. Corregidas las etiquetas de clase, batería y cadencia y recuperado el apartado técnico completo que faltaba en ambas. Se verificaron las cifras y los 17 saltos `\n` de cada ficha.
 
-**Siguiente bloque:** revisar la edición MaxLift «Keystone», que también carece de estadísticas presentes en inglés. La variante `MaxLift-II`/«Keelback» tiene una ficha española adicional sin pareja inglesa en este catálogo y deberá tratarse por separado. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
+**Último bloque:** cotejada la edición MaxLift «Keystone» con el inglés original. Corregidas las etiquetas de clase, batería y cadencia y recuperado el apartado técnico completo que faltaba. Se preservaron el nombre propio `URW`, todas las cifras y los 17 saltos `\n` del original.
+
+**Siguiente bloque:** revisar las variantes `MaxLift-II`/«Keelback» y `Cambio-II`/«Glacier», que tienen fichas españolas adicionales sin pareja inglesa en este catálogo; no atribuirles estadísticas de otros modelos sin una fuente inglesa equivalente. Después, pasar a otra familia de inventario. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
