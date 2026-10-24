@@ -179,4 +179,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **PTU, decimosexto bloque:** traducido el tipo de objeto `Room Life Support` como «Soporte vital de la sala», en coherencia con el tipo existente «Generador de Apoyo a la Vida». Se conservaron la clave y su marca `,P`.
 
+**PTU, decimoséptimo bloque:** traducido `Ship Armor` como «Blindaje de nave» en seis rótulos de blindaje. Se mantuvieron intactos los nombres propios Avenger Titan, Aegis Redeemer, MISC Reliant, Origin Jumpworks 315p, Aurora Mk I LX y Scythe, además de las marcas `,P`.
+
 **Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
