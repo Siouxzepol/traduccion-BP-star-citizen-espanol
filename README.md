@@ -4,7 +4,7 @@ Traducción comunitaria no oficial para Star Citizen. El mismo paquete incluye l
 
 ## Compatibilidad y versión de la traducción
 
-**LIVE 4.10.2 · PTU 4.10.3 · Traducción: v1.0.38** — Actualizado el 26/10/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
+**LIVE 4.10.2 · PTU 4.10.3 · Traducción: v1.0.39** — Actualizado el 26/10/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
 
 La localización añade marcadores `[BP]` y `[REP n]` a los títulos de misión cuando las recompensas son inequívocas para todas las variantes que comparten ese título. También añade reputación y posibles planos a ciertas descripciones de misión cuando pueden asociarse sin ambigüedad. Los planos pueden ser aleatorios y no se garantiza que se entreguen todos. El número de versión se incrementará con cada nueva publicación del parche.
 
@@ -50,7 +50,7 @@ Los nueve métodos conservan sus nombres originales en inglés. Sus combinacione
 
 ## Comprobación de ubicaciones
 
-Los nombres propios de sistemas, estaciones, instalaciones, asentamientos, puntos de salto y destinos de tránsito se conservan en inglés, igual que los minerales. Ejecuta `python herramientas/verificar_ubicaciones.py` con el catálogo inglés de LIVE instalado para comprobar que las 404 ubicaciones protegidas coinciden exactamente con el original.
+Los nombres propios de sistemas, estaciones, instalaciones, asentamientos, concesiones mineras, circuitos, puntos de salto y destinos de tránsito se conservan en inglés, igual que los minerales. Ejecuta `python herramientas/verificar_ubicaciones.py` con el catálogo inglés de LIVE instalado para comprobar que las 1.000 ubicaciones protegidas coinciden exactamente con el original.
 
 ## Criterios para las publicaciones
 
