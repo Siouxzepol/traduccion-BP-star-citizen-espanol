@@ -40,6 +40,10 @@ Las actualizaciones del juego pueden sobrescribir el archivo o añadir cadenas n
 
 Los títulos de misión incluyen `[BP]` si todas las variantes identificadas ofrecen planos y `[REP n]` si todas comparten la misma recompensa de reputación de facción. Las descripciones de ciertas misiones incluyen más detalles de sus recompensas. Los planos de un grupo pueden ser aleatorios; no se garantiza que se entreguen todos. El [catálogo completo de recompensas por contrato](datos/misiones_reputacion_planos.json) y el [catálogo de componentes de nave](datos/componentes_nave.json) sirven también como referencias complementarias. Consulta [cómo leer y actualizar los catálogos](datos/README.md).
 
+## Comprobación de minerales
+
+Los nombres de los minerales se mantienen en inglés para coincidir con las guías y los terminales del juego. Antes de publicar cambios en `global.ini`, ejecuta `python herramientas/verificar_minerales.py`. La comprobación detecta nombres incorrectos o cruzados en los 26 minerales minables y en los subtipos que usa el gestor de carga.
+
 ## Créditos
 
 Autor y responsable de la traducción: **Sioux_Atreides**  
