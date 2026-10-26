@@ -233,4 +233,6 @@ Se añadieron listas a 105 descripciones que carecían de ellas: 76 recuperadas 
 
 **PTU, cuadragésimo tercer bloque:** traducidos ocho nombres de componentes y armas de la Mauler Vanduul: refrigerador, toma de combustible, planta de energía, motor cuántico, radar y tres cañones. Se corrigió la errata «Comida de combustible» y se preservaron Mauler, Vanduul y las designaciones `RAGE`, `ANNIHILATOR` y `ERADICATOR`.
 
+**Refinerías, bloque de métodos:** cotejados con el inglés de LIVE los nueve métodos de procesado de las refinerías. Las propiedades vuelven a mostrarse en el orden original: velocidad, coste y rendimiento; se corrigieron los nueve rótulos y la descripción de Kazen Winnowing, que indicaba una velocidad lenta en vez de moderada. Se conservaron íntegros los nombres propios de los métodos.
+
 **Pendientes anteriores a la rama PTU:** pasar a otra familia de artículos o componentes LIVE con pareja inglesa verificable, priorizando errores de contenido sobre preferencias estilísticas. Mantener pendientes las fichas `MaxLift-II` y `Cambio-II` hasta disponer de su fuente original. Sigue pendiente comprobar en el juego la nueva redacción del gestor de flota y cómo se muestran las parejas enfoque/clase de la tienda de naves.
