@@ -44,6 +44,10 @@ Los títulos de misión incluyen `[BP]` si todas las variantes identificadas ofr
 
 Los nombres de los minerales se mantienen en inglés para coincidir con las guías y los terminales del juego. Antes de publicar cambios en `global.ini`, ejecuta `python herramientas/verificar_minerales.py`. La comprobación detecta nombres incorrectos o cruzados en los 26 minerales minables y en los subtipos que usa el gestor de carga.
 
+## Criterios para las publicaciones
+
+Las notas de cada release deben describir los cambios en pasado mediante participios como `Corregido`, `Añadida` o `Actualizado`. También deben incluir siempre los enlaces al [Discord de La Colmena](https://discord.gg/FQTpFjN) y al [canal de Twitch de Norrisplay](https://www.twitch.tv/norrisplay).
+
 ## Créditos
 
 Autor y responsable de la traducción: **Sioux_Atreides**  
