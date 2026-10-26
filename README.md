@@ -46,7 +46,12 @@ Los nombres de los minerales se mantienen en inglés para coincidir con las guí
 
 ## Criterios para las publicaciones
 
-Las notas de cada release deben describir los cambios en pasado mediante participios como `Corregido`, `Añadida` o `Actualizado`. También deben incluir siempre los enlaces al [Discord de La Colmena](https://discord.gg/FQTpFjN) y al [canal de Twitch de Norrisplay](https://www.twitch.tv/norrisplay).
+Las notas de cada release deben describir los cambios en pasado mediante participios como `Corregido`, `Añadida` o `Actualizado`. También deben terminar siempre con este bloque exacto:
+
+```markdown
+Únete al Discord de la comunidad: [https://discord.gg/FQTpFjN](https://discord.gg/FQTpFjN)\
+Asiste a los directo aquí: [https://www.twitch.tv/norrisplay](https://www.twitch.tv/norrisplay)  
+```
 
 ## Créditos
 
