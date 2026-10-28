@@ -125,6 +125,7 @@ def main() -> int:
                 if pool_ref:
                     pool_path = resolve_ref(pool_ref, records_root)
                     choices = []
+                    seen_choices = set()
                     if pool_path and pool_path.exists():
                         pool = load_record(pool_path)
                         for choice in pool.get("blueprintRewards", []):
@@ -133,10 +134,23 @@ def main() -> int:
                             bp = load_record(bp_path) if bp_path and bp_path.exists() else {}
                             craft = bp.get("blueprint", {})
                             item_ref = craft.get("processSpecificData", {}).get("entityClass") if isinstance(craft.get("processSpecificData"), dict) else None
+                            item_id = Path((item_ref or "").split("/")[-1]).stem if item_ref else None
+                            blueprint_id = Path((bp_ref or "").split("/")[-1]).stem
+                            choice_identity = blueprint_id or item_id
+                            if not choice_identity or choice_identity in seen_choices:
+                                continue
+                            seen_choices.add(choice_identity)
+                            english_name = None
+                            spanish_name = None
+                            if item_id:
+                                english_name = english.get(f"item_Name{item_id}") or english.get(f"item_Name_{item_id}")
+                                spanish_name = spanish.get(f"item_Name{item_id}") or spanish.get(f"item_Name_{item_id}")
                             choices.append({
-                                "id": Path((bp_ref or "").split("/")[-1]).stem,
+                                "id": blueprint_id,
                                 "nombre_loc_id": craft.get("blueprintName"),
-                                "objeto_id": Path((item_ref or "").split("/")[-1]).stem if item_ref else None,
+                                "nombre_ingles": english_name,
+                                "nombre_es": spanish_name,
+                                "objeto_id": item_id,
                                 "peso": choice.get("weight"),
                             })
                     blueprints.append({

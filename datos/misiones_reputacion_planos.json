@@ -10074,12 +10074,6 @@
               "nombre_loc_id": "@LOC_PLACEHOLDER",
               "objeto_id": "gmni_lmg_ballistic_01_mag",
               "peso": 1.0
-            },
-            {
-              "id": "bp_craft_gmni_lmg_ballistic_01_mag",
-              "nombre_loc_id": "@LOC_PLACEHOLDER",
-              "objeto_id": "gmni_lmg_ballistic_01_mag",
-              "peso": 1.0
             }
           ]
         },
@@ -10198,12 +10192,6 @@
               "id": "bp_craft_outlaw_legacy_armor_light_helmet_01_01_01",
               "nombre_loc_id": "@LOC_PLACEHOLDER",
               "objeto_id": "outlaw_legacy_armor_light_helmet_01_01_01",
-              "peso": 1.0
-            },
-            {
-              "id": "bp_craft_gmni_lmg_ballistic_01_mag",
-              "nombre_loc_id": "@LOC_PLACEHOLDER",
-              "objeto_id": "gmni_lmg_ballistic_01_mag",
               "peso": 1.0
             },
             {
@@ -68999,12 +68987,6 @@
               "peso": 1.0
             },
             {
-              "id": "",
-              "nombre_loc_id": null,
-              "objeto_id": null,
-              "peso": 1.0
-            },
-            {
               "id": "bp_craft_volt_smg_energy_01_tint01",
               "nombre_loc_id": "@LOC_PLACEHOLDER",
               "objeto_id": "volt_smg_energy_01_tint01",
@@ -69197,12 +69179,6 @@
               "id": "bp_craft_qrt_combat_medium_helmet_01_01_10",
               "nombre_loc_id": "@LOC_PLACEHOLDER",
               "objeto_id": "qrt_combat_medium_helmet_01_01_10",
-              "peso": 1.0
-            },
-            {
-              "id": "",
-              "nombre_loc_id": null,
-              "objeto_id": null,
               "peso": 1.0
             },
             {
@@ -69442,12 +69418,6 @@
               "id": "bp_craft_qrt_combat_medium_helmet_01_01_10",
               "nombre_loc_id": "@LOC_PLACEHOLDER",
               "objeto_id": "qrt_combat_medium_helmet_01_01_10",
-              "peso": 1.0
-            },
-            {
-              "id": "",
-              "nombre_loc_id": null,
-              "objeto_id": null,
               "peso": 1.0
             },
             {
@@ -85401,12 +85371,6 @@
               "peso": 1.0
             },
             {
-              "id": "bp_craft_gys_pants_01_01_01",
-              "nombre_loc_id": "@LOC_PLACEHOLDER",
-              "objeto_id": "gys_pants_01_01_01",
-              "peso": 1.0
-            },
-            {
               "id": "bp_craft_none_lmg_ballistic_01_mag",
               "nombre_loc_id": "@LOC_PLACEHOLDER",
               "objeto_id": "none_lmg_ballistic_01_mag",
@@ -89152,12 +89116,6 @@
               "id": "bp_craft_gys_jacket_01_01_01",
               "nombre_loc_id": "@LOC_PLACEHOLDER",
               "objeto_id": "gys_jacket_01_01_01",
-              "peso": 1.0
-            },
-            {
-              "id": "bp_craft_gys_pants_01_01_01",
-              "nombre_loc_id": "@LOC_PLACEHOLDER",
-              "objeto_id": "gys_pants_01_01_01",
               "peso": 1.0
             },
             {
@@ -109511,12 +109469,6 @@
               "id": "bp_craft_omc_utility_heavy_helmet_01_01_04",
               "nombre_loc_id": "@LOC_PLACEHOLDER",
               "objeto_id": "omc_utility_heavy_helmet_01_01_04",
-              "peso": 1.0
-            },
-            {
-              "id": "",
-              "nombre_loc_id": null,
-              "objeto_id": null,
               "peso": 1.0
             },
             {

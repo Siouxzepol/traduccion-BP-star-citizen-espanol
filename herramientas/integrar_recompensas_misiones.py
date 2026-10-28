@@ -7,7 +7,7 @@ agree on the marker, and descriptions when a title key maps unambiguously to a
 reward signature and a matching description key exists in global.ini.
 
 Usage:
-  python herramientas/integrar_recompensas_misiones.py [catalog.json] [global.ini]
+  python herramientas/integrar_recompensas_misiones.py [catalog.json] [global.ini] [english.ini] [componentes.json]
 """
 
 from __future__ import annotations
@@ -21,6 +21,7 @@ from pathlib import Path
 
 REWARD_BLOCK_RE = re.compile(r"\\n\\n(?:<EM4>)?RECOMPENSAS DEL CONTRATO(?:</EM4>)?")
 TITLE_MARKER_RE = re.compile(r"^(?:<EM\d+>)?\[(?:BP\??|REP\s+[^\]]+)\](?:</EM\d+>)?\s*")
+PLACEHOLDER_TOKENS = {"", "@LOC_PLACEHOLDER", "@LOC_UNINITIALIZED"}
 
 
 def title_reward_tags(contracts: list[dict]) -> list[str]:
@@ -65,29 +66,43 @@ def candidate_description_keys(title_key: str) -> list[str]:
     return candidates
 
 
-def reward_text(contract: dict, strings: dict[str, str]) -> str:
+def reward_text(
+    contract: dict,
+    strings: dict[str, str],
+    english_strings: dict[str, str],
+    component_names: dict[str, str],
+) -> str:
     lines = ["<EM4>RECOMPENSAS DEL CONTRATO</EM4>"]
     reputation = contract.get("reputacion", [])
     if reputation:
         parts = []
+        seen_reputation = set()
         for reward in reputation:
             faction = reward.get("faccion") or reward.get("faccion_ingles") or "facción"
             amount = reward.get("cantidad")
-            if amount is not None:
-                parts.append(f"+{amount} con {faction}")
+            scope_key = (reward.get("ambito_loc_id") or "").lstrip("@")
+            scope = strings.get(scope_key) or reward.get("ambito_ingles") or "Reputación"
+            identity = (faction, scope_key, amount)
+            if amount is not None and identity not in seen_reputation:
+                parts.append(f"+{amount} {scope} con {faction}")
+                seen_reputation.add(identity)
         if parts:
             lines.append("<EM4>Reputación</EM4>: " + "; ".join(parts) + ".")
 
     pool_lines = []
     for pool_index, pool in enumerate(contract.get("planos", []), start=1):
         names = []
+        seen_options = set()
         for option in pool.get("opciones", []):
             item_id = option.get("objeto_id")
             if not item_id:
                 continue
-            name_key = f"item_Name{item_id}"
-            name = (strings.get(name_key) or strings.get(f"item_Name_{item_id}") or readable_item_name(item_id)).strip()
-            if name not in names:
+            option_id = option.get("id") or item_id
+            if option_id in seen_options:
+                continue
+            seen_options.add(option_id)
+            name = blueprint_item_name(option, english_strings, component_names)
+            if name and name not in names:
                 names.append(name)
         if names:
             chance = pool.get("probabilidad")
@@ -99,19 +114,43 @@ def reward_text(contract: dict, strings: dict[str, str]) -> str:
     return r"\n\n".join(lines)
 
 
-def readable_item_name(item_id: str) -> str:
-    """Translate obvious item-type words while retaining manufacturer/model IDs."""
+def blueprint_item_name(
+    option: dict,
+    english_strings: dict[str, str],
+    component_names: dict[str, str],
+) -> str:
+    """Resolve a blueprint reward to an English-only, unambiguous item name."""
+    item_id = (option.get("objeto_id") or "").strip()
+    explicit = (option.get("nombre_ingles") or "").strip()
+    if explicit and explicit not in PLACEHOLDER_TOKENS:
+        return explicit
+    if item_id:
+        localized = (
+            english_strings.get(f"item_Name{item_id}")
+            or english_strings.get(f"item_Name_{item_id}")
+        )
+        if localized:
+            return localized.strip()
+        component = component_names.get(item_id.lower())
+        if component:
+            return component.strip()
+        return readable_item_name_english(item_id)
+    return ""
+
+
+def readable_item_name_english(item_id: str) -> str:
+    """Create a deterministic English fallback without translating a BP name."""
     manufacturers = {
         "amrs": "AMRS", "apar": "APAR", "asad": "ASAD", "banu": "Banu",
         "behr": "Behring", "grin": "Greycat", "gmni": "Gemini", "thcn": "Tachyon",
     }
     types = {
-        "lasercannon": "cañón láser", "ballisticgatling": "ametralladora balística",
-        "ballisticscattergun": "escopeta balística", "massdriver": "acelerador de masa",
-        "distortionrepeater": "repetidor de distorsión", "tachyoncannon": "cañón de taquiones",
-        "ballisticcannon": "cañón balístico", "ballisticrepeater": "repetidor balístico",
-        "energycannon": "cañón de energía", "mining_laser": "láser minero",
-        "fuel_nozzle": "boquilla de combustible", "utility": "herramienta",
+        "lasercannon": "Laser Cannon", "ballisticgatling": "Ballistic Gatling",
+        "ballisticscattergun": "Ballistic Scattergun", "massdriver": "Mass Driver",
+        "distortionrepeater": "Distortion Repeater", "tachyoncannon": "Tachyon Cannon",
+        "ballisticcannon": "Ballistic Cannon", "ballisticrepeater": "Ballistic Repeater",
+        "energycannon": "Energy Cannon", "mining_laser": "Mining Laser",
+        "fuel_nozzle": "Fuel Nozzle", "utility": "Utility",
     }
     parts = item_id.lower().split("_")
     manufacturer = manufacturers.get(parts[0], parts[0].upper())
@@ -119,45 +158,60 @@ def readable_item_name(item_id: str) -> str:
     description = next((label for key, label in types.items() if key in compact), None)
     if description:
         size = re.search(r"(?:^|_)s(\d+)(?:_|$)", compact)
-        return f"{description.capitalize()} {manufacturer}" + (f" S{size.group(1)}" if size else "")
+        return f"{manufacturer} {description}" + (f" S{size.group(1)}" if size else "")
     component_types = {
-        "cool": "Enfriador", "powr": "Planta de energía", "shld": "Generador de escudo",
-        "radr": "Radar", "qdrv": "Motor cuántico", "fuel": "Componente de combustible",
-        "mining": "Equipo de minería", "salvage": "Equipo de salvamento", "cargo": "Contenedor",
+        "cool": "Cooler", "powr": "Power Plant", "shld": "Shield Generator",
+        "radr": "Radar", "qdrv": "Quantum Drive", "fuel": "Fuel Component",
+        "mining": "Mining Equipment", "salvage": "Salvage Equipment", "cargo": "Cargo Container",
     }
     if parts[0] in component_types:
         brand = parts[1].upper() if len(parts) > 1 else ""
         model_parts = [part for part in parts[2:] if part != "scitem"]
-        tokens = {
-            "armor": "armadura", "heavy": "pesada", "medium": "mediana", "light": "ligera",
-            "arms": "brazales", "legs": "perneras", "core": "torso", "helmet": "casco",
-            "backpack": "mochila", "suit": "traje", "mag": "cargador", "pod": "cápsula",
-            "shipmining": "minera", "nozzle": "boquilla", "tank": "depósito",
-        }
         model = []
         size = None
         for part in model_parts:
             if re.fullmatch(r"s\d+", part):
                 size = part.upper()
             else:
-                model.append(tokens.get(part, part.capitalize()))
+                model.append(part.upper() if len(part) <= 4 else part.capitalize())
         label = " ".join([component_types[parts[0]], brand, *model]).strip()
         return label + (f" {size}" if size else "")
-    generic = {
-        "heavy": "pesado", "medium": "mediano", "light": "ligero", "core": "torso",
-        "arms": "brazales", "legs": "perneras", "helmet": "casco", "backpack": "mochila",
-        "flight": "vuelo", "suit": "traje", "armor": "armadura", "armour": "armadura",
-    }
-    words = [generic.get(part, part) for part in parts[1:]]
+    words = [part.upper() if len(part) <= 4 else part.capitalize() for part in parts[1:]]
     return manufacturer + (" " + " ".join(words) if words else "")
+
+
+def load_strings(path: Path | None) -> dict[str, str]:
+    if not path or not path.exists():
+        return {}
+    values = {}
+    for line in path.read_text(encoding="utf-8-sig", errors="replace").splitlines():
+        if line and not line.lstrip().startswith((";", "#")) and "=" in line:
+            key, value = line.split("=", 1)
+            values[key.strip()] = value.strip()
+    return values
+
+
+def load_component_names(path: Path | None) -> dict[str, str]:
+    if not path or not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8-sig"))
+    return {
+        component["id"].lower(): component["nombre_ingles"]
+        for component in data.get("componentes", [])
+        if component.get("id") and component.get("nombre_ingles")
+    }
 
 
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
     catalog_path = Path(sys.argv[1]) if len(sys.argv) > 1 else root / "datos" / "misiones_reputacion_planos.json"
     ini_path = Path(sys.argv[2]) if len(sys.argv) > 2 else root / "global.ini"
+    english_path = Path(sys.argv[3]) if len(sys.argv) > 3 else None
+    components_path = Path(sys.argv[4]) if len(sys.argv) > 4 else root / "datos" / "componentes_nave.json"
     catalog = json.loads(catalog_path.read_text(encoding="utf-8-sig"))
     contracts = catalog["contratos"]
+    english_strings = load_strings(english_path)
+    component_names = load_component_names(components_path)
 
     groups: dict[str, list[dict]] = defaultdict(list)
     for contract in contracts:
@@ -178,22 +232,29 @@ def main() -> int:
             values[match.group(1).strip()] = match.group(3)
 
     updates: dict[str, str] = {}
+    managed_description_keys: set[str] = set()
     title_updates: dict[str, list[str]] = {}
     skipped_ambiguous = 0
     for title_key, variants in groups.items():
         tags = title_reward_tags(variants)
-        if tags and title_key in values:
+        if title_key in values:
             title_updates[title_key] = tags
 
     for title_key, variants in groups.items():
+        description_key = next(
+            (key for key in candidate_description_keys(title_key) if key in values),
+            None,
+        )
+        if not description_key:
+            continue
+        managed_description_keys.add(description_key)
         signatures = {reward_signature(c) for c in variants}
         if len(signatures) != 1:
             skipped_ambiguous += 1
             continue
-        for description_key in candidate_description_keys(title_key):
-            if description_key in values:
-                updates[description_key] = reward_text(variants[0], values)
-                break
+        updates[description_key] = reward_text(
+            variants[0], values, english_strings, component_names
+        )
 
     written = 0
     titles_written = 0
@@ -211,15 +272,19 @@ def main() -> int:
                 value = TITLE_MARKER_RE.sub("", value, count=1)
             tags = title_updates[title_key]
             prefix = " ".join(f"<EM4>{tag}</EM4>" for tag in tags)
-            result.append(key + suffix + "=" + prefix + " " + value.rstrip() + ending)
-            titles_written += 1
+            localized_value = (prefix + " " + value.rstrip()).lstrip()
+            result.append(key + suffix + "=" + localized_value + ending)
+            titles_written += int(bool(tags))
             bp_titles += int("[BP]" in tags)
             rep_titles += int(any(tag.startswith("[REP ") for tag in tags))
-        elif match and match.group(1).strip() in updates:
+        elif match and match.group(1).strip() in managed_description_keys:
             key, suffix, value = match.group(1), match.group(2) or "", match.group(3)
             value = REWARD_BLOCK_RE.split(value, 1)[0].rstrip()
-            result.append(key + suffix + "=" + value + r"\n\n" + updates[match.group(1).strip()] + ending)
-            written += 1
+            description_key = match.group(1).strip()
+            if description_key in updates:
+                value += r"\n\n" + updates[description_key]
+                written += 1
+            result.append(key + suffix + "=" + value + ending)
         else:
             result.append(line)
 

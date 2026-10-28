@@ -6,8 +6,8 @@
 
 ## Cómo interpretar los datos
 
-- `reputacion[].cantidad` es la cantidad configurada en los registros del juego para el resultado satisfactorio seleccionado. Puede haber más de una entrada por contrato y se conserva el ámbito mediante su ID de localización.
-- `planos[]` indica una recompensa que apunta a un grupo (`pool`). `opciones` enumera los planos incluidos en ese grupo, su peso relativo y el objeto asociado cuando el juego lo declara. Son opciones del grupo, no una promesa de que se entreguen todas.
+- `reputacion[].cantidad` es la cantidad configurada en los registros del juego para el resultado satisfactorio seleccionado. Puede haber más de una entrada por contrato y se conserva el ámbito mediante su ID de localización. La interfaz muestra cada cantidad y su ámbito por separado para no confundir dos recompensas con un duplicado.
+- `planos[]` indica una recompensa que apunta a un grupo (`pool`). `opciones` enumera los planos incluidos en ese grupo, su peso relativo y el objeto asociado cuando el juego lo declara. Son opciones del grupo, no una promesa de que se entreguen todas. Los nombres visibles de los BP se resuelven exclusivamente desde la localización inglesa o desde el nombre inglés del componente; si el parche no publica ninguno, se deriva un nombre inglés inequívoco del identificador original.
 - Los identificadores de naves, objetos, contratos y planos se mantienen tal como aparecen en los datos del juego; no se traducen nombres propios.
 - El catálogo es una instantánea de datos de juego; la integración en `global.ini` es texto estático y no puede consultar el contrato activo en tiempo real. Solo se muestran las recompensas de claves asociables sin ambigüedad. Los parches pueden cambiar contratos y recompensas.
 
@@ -17,8 +17,11 @@ El script de `../herramientas/extraer_datos_misiones.py` recibe el directorio JS
 
 ```powershell
 python herramientas/extraer_datos_misiones.py <DataCore-json> <english/global.ini> <publicacion/global.ini> datos/misiones_reputacion_planos.json
-python herramientas/integrar_recompensas_misiones.py datos/misiones_reputacion_planos.json publicacion/global.ini
+python herramientas/integrar_recompensas_misiones.py datos/misiones_reputacion_planos.json publicacion/global.ini <english/global.ini> datos/componentes_nave.json
 python herramientas/extraer_datos_componentes.py <DataCore-json> <english/global.ini> <publicacion/global.ini> datos/componentes_nave.json
+python herramientas/verificar_recompensas_misiones.py datos/misiones_reputacion_planos.json publicacion/global.ini <english/global.ini> datos/componentes_nave.json
 ```
+
+La verificación rechaza opciones vacías, BP repetidos, identificadores incoherentes, nombres traducidos, etiquetas `[BP]`/`[REP n]` obsoletas y bloques de reputación que no coincidan con el catálogo.
 
 Los registros se pueden extraer de `Data.p4k` con [StarBreaker](https://github.com/diogotr7/StarBreaker). No se redistribuyen aquí los archivos originales del juego, solo el catálogo derivado.
