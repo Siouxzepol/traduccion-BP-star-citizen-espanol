@@ -20,6 +20,16 @@ PRINTF_RE = re.compile(
     r"%(?:\d+\$)?[-+0#]*\d*(?:\.\d+)?(?:ll|l|h)?[diuoxXfFeEgGaAcspS]"
 )
 FORMAT_TAGS = ("EM1", "EM2", "EM3", "EM4")
+# En el PTU actual estas cinco vistas ya no proporcionan el texto asociado a
+# ``%ls``. Conservar el marcador del catálogo antiguo de LIVE hace que aparezca
+# literalmente en el HUD, por lo que la traducción lo omite de forma deliberada.
+PTU_UNUSED_PRINTF_KEYS = {
+    "SP_Wait_Obj",
+    "bounty_fps_boss_obj_HUD",
+    "sectorsweep_HoldPosition_Timer",
+    "sectorsweep_PatrolPoint_Timer",
+    "sectorsweep_Rendevouz_Timer",
+}
 
 
 def load_entries(
@@ -93,7 +103,7 @@ def compare_with_english(
 
         english_printf = Counter(PRINTF_RE.findall(english_value))
         spanish_printf = Counter(PRINTF_RE.findall(spanish_value))
-        if english_printf != spanish_printf:
+        if english_printf != spanish_printf and key not in PTU_UNUSED_PRINTF_KEYS:
             errors.append(
                 f"global.ini:{spanish_line}: {key} altera parámetros printf: "
                 f"inglés={dict(english_printf)}, español={dict(spanish_printf)}"
