@@ -91,7 +91,8 @@ def main() -> int:
             errores.append(f"{clave}: falta en el catálogo inglés")
         elif clave not in espanol:
             errores.append(f"{clave}: falta en global.ini")
-        elif espanol[clave] != ingles[clave_ingles]:
+        # El PTU puede añadir espacios finales invisibles a rótulos existentes.
+        elif espanol[clave].rstrip() != ingles[clave_ingles].rstrip():
             errores.append(
                 f"{clave}: debe conservar {ingles[clave_ingles]!r}; "
                 f"contiene {espanol[clave]!r}"
@@ -111,8 +112,8 @@ def main() -> int:
         return 1
 
     print(
-        f"OK: {len(CLAVES_UBICACION)} nombres de ubicaciones conservan exactamente "
-        "el texto original inglés."
+        f"OK: {len(CLAVES_UBICACION)} nombres de ubicaciones conservan "
+        "el texto original inglés (sin contar espacios finales)."
     )
     return 0
 
