@@ -1,4 +1,4 @@
-"""Comprueba la integridad del catálogo español frente al inglés de LIVE.
+"""Comprueba la integridad del catálogo español frente al inglés de LIVE o PTU.
 
 Uso:
     python herramientas/verificar_localizacion.py RUTA_AL_GLOBAL_INGLES
@@ -120,7 +120,7 @@ def main() -> int:
         return 1
 
     print(
-        f"OK: {len(spanish)} entradas españolas cubren las {len(english)} claves de LIVE "
+        f"OK: {len(spanish)} entradas españolas cubren las {len(english)} claves inglesas "
         "sin pérdida de macros, parámetros dinámicos ni etiquetas de formato."
     )
     return 0
