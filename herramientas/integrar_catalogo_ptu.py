@@ -49,6 +49,12 @@ SOURCE_REPLACEMENTS: dict[str, tuple[tuple[str, str], ...]] = {
     ),
 }
 
+PROTECTED_LOCATION_PREFIXES = (
+    "Starchitect_Cluster_",
+    "Starchitect_Location_",
+    "Starchitect_Sector_",
+)
+
 
 def read_entries(path: Path) -> dict[str, str]:
     entries: dict[str, str] = {}
@@ -102,7 +108,10 @@ def main() -> int:
 
         official_value = official_spanish.get(key)
         remembered_values = memory.get(english_value, set())
-        if official_value is not None and official_value != english_value:
+        if key.startswith(PROTECTED_LOCATION_PREFIXES):
+            value = english_value
+            fallback_count += 1
+        elif official_value is not None and official_value != english_value:
             value = official_value
             official_count += 1
         elif len(remembered_values) == 1:
