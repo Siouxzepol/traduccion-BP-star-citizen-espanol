@@ -1,7 +1,7 @@
 {
   "fuente": "DataCore extraído de la instalación local de Star Citizen",
   "nota": "Valores de recursos tal como están configurados en el juego; pueden cambiar con los parches. Se incluyen nombre localizado, tipo, tamaño, grado, masa y flujos declarados.",
-  "total_componentes": 2566,
+  "total_componentes": 2585,
   "componentes": [
     {
       "id": "bomb_s03_fski_thunderball",
@@ -2317,7 +2317,7 @@
       "tamano": 4,
       "grado": 1,
       "nombre_loc_id": "item_NameCOOL_VNCL_S04_Mauler",
-      "nombre_es": "Mauler Cooler",
+      "nombre_es": "Refrigerador Mauler",
       "nombre_ingles": "Mauler Cooler",
       "fabricante_id": null,
       "masa": 43000.0,
@@ -40388,16 +40388,16 @@
       "flujos_recursos": []
     },
     {
-      "id": "gmisl_s02_em_taln_dominator",
+      "id": "gmisl_s01_template",
       "tipo": "Missile",
       "subtipo": "GroundVehicleMissile",
-      "tamano": 2,
+      "tamano": 1,
       "grado": 1,
-      "nombre_loc_id": "item_NameGMISL_S02_EM_TALN_Dominator",
-      "nombre_es": "Dominator II-G Misile",
-      "nombre_ingles": "Dominator II-G Missile",
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
-      "masa": 136.0,
+      "masa": 449.0,
       "flujos_recursos": []
     },
     {
@@ -40435,6 +40435,19 @@
       "nombre_loc_id": "item_NameMISL_S02_EM_TALN_Dominator",
       "nombre_es": "Misil Dominator II",
       "nombre_ingles": "Dominator II Missile",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 136.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "gmisl_s02_em_taln_dominator",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 2,
+      "grado": 1,
+      "nombre_loc_id": "item_NameGMISL_S02_EM_TALN_Dominator",
+      "nombre_es": "Misil Dominator II-G",
+      "nombre_ingles": "Dominator II-G Missile",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
       "masa": 136.0,
       "flujos_recursos": []
@@ -40511,7 +40524,7 @@
       "tamano": 2,
       "grado": 1,
       "nombre_loc_id": "item_NameGMISL_S02_CS_FSKI_Tempest",
-      "nombre_es": "Misiles Tempest II-G",
+      "nombre_es": "Misil Tempest II-G",
       "nombre_ingles": "Tempest II-G Missile",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/fski.json",
       "masa": 121.0,
@@ -40531,14 +40544,14 @@
       "flujos_recursos": []
     },
     {
-      "id": "gmisl_s03_cs_fski_arrester",
+      "id": "gmisl_s02_template",
       "tipo": "Missile",
       "subtipo": "GroundVehicleMissile",
-      "tamano": 3,
+      "tamano": 2,
       "grado": 1,
-      "nombre_loc_id": "item_NameGMISL_S09_CS_TALN_Argos",
-      "nombre_es": "Argos IX-G Torpedo",
-      "nombre_ingles": "Argos IX-G Torpedo",
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
       "masa": 449.0,
       "flujos_recursos": []
@@ -40622,6 +40635,32 @@
       "flujos_recursos": []
     },
     {
+      "id": "gmisl_s03_template",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 3,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 449.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "gmisl_s03_cs_fski_arrester",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 3,
+      "grado": 1,
+      "nombre_loc_id": "item_NameGMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX-G",
+      "nombre_ingles": "Argos IX-G Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 449.0,
+      "flujos_recursos": []
+    },
+    {
       "id": "misl_s04_cs_taln_assailant",
       "tipo": "Missile",
       "subtipo": "Missile",
@@ -40700,6 +40739,19 @@
       "flujos_recursos": []
     },
     {
+      "id": "gmisl_s04_template",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 4,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 449.0,
+      "flujos_recursos": []
+    },
+    {
       "id": "misl_s05_em_taln_reaper",
       "tipo": "Missile",
       "subtipo": "Torpedo",
@@ -40713,6 +40765,19 @@
       "flujos_recursos": []
     },
     {
+      "id": "gmisl_s05_em_taln_reaper",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 5,
+      "grado": 1,
+      "nombre_loc_id": "item_NameGMISL_S05_EM_TALN_Reaper",
+      "nombre_es": "Misil Reaper V-G",
+      "nombre_ingles": "Reaper V-G Missile",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 326.0,
+      "flujos_recursos": []
+    },
+    {
       "id": "misl_s05_em_taln_scimitar",
       "tipo": "Missile",
       "subtipo": "Missile",
@@ -40721,6 +40786,19 @@
       "nombre_loc_id": "item_NameMISL_S05_EM_TALN_Scimitar",
       "nombre_es": "Misil Scimitar V",
       "nombre_ingles": "Scimitar V Missile",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 314.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "gmisl_s05_em_taln_scimitar",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 5,
+      "grado": 1,
+      "nombre_loc_id": "item_NameGMISL_S05_EM_TALN_Scimitar",
+      "nombre_es": "Misil Scimitar V-G",
+      "nombre_ingles": "Scimitar V-G Missile",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
       "masa": 314.0,
       "flujos_recursos": []
@@ -40752,19 +40830,6 @@
       "flujos_recursos": []
     },
     {
-      "id": "gmisl_s05_em_taln_reaper",
-      "tipo": "Missile",
-      "subtipo": "GroundVehicleMissile",
-      "tamano": 5,
-      "grado": 1,
-      "nombre_loc_id": "item_NameGMISL_S05_EM_TALN_Reaper",
-      "nombre_es": "Misil V-G",
-      "nombre_ingles": "Reaper V-G Missile",
-      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
-      "masa": 326.0,
-      "flujos_recursos": []
-    },
-    {
       "id": "misl_s05_ir_taln_valkyrie",
       "tipo": "Missile",
       "subtipo": "Torpedo",
@@ -40784,23 +40849,23 @@
       "tamano": 5,
       "grado": 1,
       "nombre_loc_id": "item_NameGMISL_S05_IR_TALN_Valkyrie",
-      "nombre_es": "Misiles V-G Valkyrie",
+      "nombre_es": "Misil Valkyrie V-G",
       "nombre_ingles": "Valkyrie V-G Missile",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
       "masa": 314.0,
       "flujos_recursos": []
     },
     {
-      "id": "gmisl_s05_em_taln_scimitar",
+      "id": "gmisl_s05_template",
       "tipo": "Missile",
       "subtipo": "GroundVehicleMissile",
       "tamano": 5,
       "grado": 1,
-      "nombre_loc_id": "item_NameGMISL_S05_EM_TALN_Scimitar",
-      "nombre_es": "Scimitar V-G Misile",
-      "nombre_ingles": "Scimitar V-G Missile",
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
-      "masa": 314.0,
+      "masa": 449.0,
       "flujos_recursos": []
     },
     {
@@ -40823,36 +40888,23 @@
       "tamano": 7,
       "grado": 1,
       "nombre_loc_id": "item_NameGMISL_S07_IR_TALN_Hellion",
-      "nombre_es": "Misiles de Infierno VII-G",
+      "nombre_es": "Misil Hellion VII-G",
       "nombre_ingles": "Hellion VII-G Missile",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
       "masa": 452.0,
       "flujos_recursos": []
     },
     {
-      "id": "gmisl_s09_cs_taln_argos",
+      "id": "gmisl_s07_template",
       "tipo": "Missile",
       "subtipo": "GroundVehicleMissile",
-      "tamano": 9,
+      "tamano": 7,
       "grado": 1,
-      "nombre_loc_id": "item_NameGMISL_S09_CS_TALN_Argos",
-      "nombre_es": "Argos IX-G Torpedo",
-      "nombre_ingles": "Argos IX-G Torpedo",
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
       "masa": 449.0,
-      "flujos_recursos": []
-    },
-    {
-      "id": "gmisl_s09_em_taln_seeker",
-      "tipo": "Missile",
-      "subtipo": "GroundVehicleMissile",
-      "tamano": 9,
-      "grado": 1,
-      "nombre_loc_id": "item_NameGMISL_S09_EM_TALN_Seeker",
-      "nombre_es": "Seeker IX-G Torpedo",
-      "nombre_ingles": "Seeker IX-G Torpedo",
-      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
-      "masa": 447.0,
       "flujos_recursos": []
     },
     {
@@ -40866,6 +40918,58 @@
       "nombre_ingles": "Typhoon IX-G Torpedo",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
       "masa": 452.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "bomb_s03_template",
+      "tipo": "Missile",
+      "subtipo": "Torpedo",
+      "tamano": 9,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 449.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "bomb_s05_template",
+      "tipo": "Missile",
+      "subtipo": "Torpedo",
+      "tamano": 9,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 449.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "bomb_s10_template",
+      "tipo": "Missile",
+      "subtipo": "Torpedo",
+      "tamano": 9,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 449.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "gmisl_s09_template",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 9,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 449.0,
       "flujos_recursos": []
     },
     {
@@ -40908,6 +41012,19 @@
       "flujos_recursos": []
     },
     {
+      "id": "gmisl_s09_cs_taln_argos",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 9,
+      "grado": 1,
+      "nombre_loc_id": "item_NameGMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX-G",
+      "nombre_ingles": "Argos IX-G Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 449.0,
+      "flujos_recursos": []
+    },
+    {
       "id": "misl_s09_em_taln_seeker",
       "tipo": "Missile",
       "subtipo": "Torpedo",
@@ -40916,6 +41033,19 @@
       "nombre_loc_id": "item_NameMISL_S09_EM_TALN_Seeker",
       "nombre_es": "Torpedo Seeker IX",
       "nombre_ingles": "Seeker IX Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 447.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "gmisl_s09_em_taln_seeker",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 9,
+      "grado": 1,
+      "nombre_loc_id": "item_NameGMISL_S09_EM_TALN_Seeker",
+      "nombre_es": "Torpedo Seeker IX-G",
+      "nombre_ingles": "Seeker IX-G Torpedo",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
       "masa": 447.0,
       "flujos_recursos": []
@@ -40986,16 +41116,68 @@
       "flujos_recursos": []
     },
     {
+      "id": "gmisl_s10_template",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 10,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 449.0,
+      "flujos_recursos": []
+    },
+    {
       "id": "misl_s10_ir_behr_torpedo",
       "tipo": "Missile",
       "subtipo": "Torpedo",
       "tamano": 10,
       "grado": 1,
       "nombre_loc_id": "item_NameMISL_S10_IR_BEHR_Torpedo",
-      "nombre_es": "VT-T10 \"Veritas\" Torpedo",
+      "nombre_es": "Torpedo VT-T10 «Veritas»",
       "nombre_ingles": "VT-T10 \"Veritas\" Torpedo",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/personalweapons/scitemmanufacturer.behr.json",
       "masa": 449.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "misl_s10_cs_taln_vanquisher",
+      "tipo": "Missile",
+      "subtipo": "Torpedo",
+      "tamano": 10,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S10_CS_TALN_Vanquisher",
+      "nombre_es": "Torpedo Vanquisher X-CS",
+      "nombre_ingles": "Vanquisher X-CS Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 905.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "misl_s10_em_taln_vanquisher",
+      "tipo": "Missile",
+      "subtipo": "Torpedo",
+      "tamano": 10,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S10_EM_TALN_Vanquisher",
+      "nombre_es": "Torpedo Vanquisher X-EM",
+      "nombre_ingles": "Vanquisher X-EM Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 905.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "misl_s10_ir_taln_vanquisher",
+      "tipo": "Missile",
+      "subtipo": "Torpedo",
+      "tamano": 10,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S10_IR_TALN_Vanquisher",
+      "nombre_es": "Torpedo Vanquisher X-IR",
+      "nombre_ingles": "Vanquisher X-IR Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
+      "masa": 905.0,
       "flujos_recursos": []
     },
     {
@@ -41009,45 +41191,6 @@
       "nombre_ingles": "Vanduul Cleaver",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.vncl.json",
       "masa": 449.0,
-      "flujos_recursos": []
-    },
-    {
-      "id": "misl_s10_cs_taln_vanquisher",
-      "tipo": "Missile",
-      "subtipo": "Torpedo",
-      "tamano": 10,
-      "grado": 1,
-      "nombre_loc_id": "item_NameMISL_S10_CS_TALN_Vanquisher",
-      "nombre_es": "Vanquisher X-CS Torpedo",
-      "nombre_ingles": "Vanquisher X-CS Torpedo",
-      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
-      "masa": 905.0,
-      "flujos_recursos": []
-    },
-    {
-      "id": "misl_s10_em_taln_vanquisher",
-      "tipo": "Missile",
-      "subtipo": "Torpedo",
-      "tamano": 10,
-      "grado": 1,
-      "nombre_loc_id": "item_NameMISL_S10_EM_TALN_Vanquisher",
-      "nombre_es": "Vanquisher X-EM Torpedo",
-      "nombre_ingles": "Vanquisher X-EM Torpedo",
-      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
-      "masa": 905.0,
-      "flujos_recursos": []
-    },
-    {
-      "id": "misl_s10_ir_taln_vanquisher",
-      "tipo": "Missile",
-      "subtipo": "Torpedo",
-      "tamano": 10,
-      "grado": 1,
-      "nombre_loc_id": "item_NameMISL_S10_IR_TALN_Vanquisher",
-      "nombre_es": "Vanquisher X-IR Torpedo",
-      "nombre_ingles": "Vanquisher X-IR Torpedo",
-      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
-      "masa": 905.0,
       "flujos_recursos": []
     },
     {
@@ -41125,6 +41268,19 @@
       "nombre_es": "EX-T12-IR \"Ejecutor\" Torpedo",
       "nombre_ingles": "EX-T12-IR \"Executor\" Torpedo",
       "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/personalweapons/scitemmanufacturer.behr.json",
+      "masa": 449.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "gmisl_s12_template",
+      "tipo": "Missile",
+      "subtipo": "GroundVehicleMissile",
+      "tamano": 12,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMISL_S09_CS_TALN_Argos",
+      "nombre_es": "Torpedo Argos IX",
+      "nombre_ingles": "Argos IX Torpedo",
+      "fabricante_id": "file://./../../../../../../../../libs/foundry/records/scitemmanufacturer/taln.json",
       "masa": 449.0,
       "flujos_recursos": []
     },
@@ -42941,7 +43097,7 @@
       "tamano": 4,
       "grado": 1,
       "nombre_loc_id": "item_NamePOWR_VNCL_S04_Mauler",
-      "nombre_es": "Mauler Power Plant",
+      "nombre_es": "Planta de energía Mauler",
       "nombre_ingles": "Mauler Power Plant",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.vncl.json",
       "masa": 60000.0,
@@ -45993,7 +46149,7 @@
       "tamano": 4,
       "grado": 1,
       "nombre_loc_id": "item_NameQDRV_VNCL_S04_Mauler",
-      "nombre_es": "Mauler Quantum Drive",
+      "nombre_es": "Motor cuántico Mauler",
       "nombre_ingles": "Mauler Quantum Drive",
       "fabricante_id": null,
       "masa": 150000.0,
@@ -47378,34 +47534,6 @@
       ]
     },
     {
-      "id": "radr_vncl_s02_mauler",
-      "tipo": "Radar",
-      "subtipo": "MidRangeRadar",
-      "tamano": 2,
-      "grado": 2,
-      "nombre_loc_id": "item_NameRADR_VNCL_S04_Mauler",
-      "nombre_es": "Mauler Radar",
-      "nombre_ingles": "Mauler Radar",
-      "fabricante_id": null,
-      "masa": 4000.0,
-      "flujos_recursos": [
-        {
-          "estado": "Online",
-          "direccion": "consumption",
-          "recurso": "Power",
-          "cantidad_por_segundo": 5,
-          "unidad": "SPowerSegmentResourceUnit"
-        },
-        {
-          "estado": "Online",
-          "direccion": "consumption",
-          "recurso": "Coolant",
-          "cantidad_por_segundo": 0.0,
-          "unidad": "SStandardResourceUnit"
-        }
-      ]
-    },
-    {
       "id": "radr_chco_s02_observer",
       "tipo": "Radar",
       "subtipo": "MidRangeRadar",
@@ -47415,7 +47543,7 @@
       "nombre_es": "Observador",
       "nombre_ingles": "Observer",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/chco.json",
-      "masa": 0.0,
+      "masa": 590.0,
       "flujos_recursos": [
         {
           "estado": "Online",
@@ -47473,6 +47601,34 @@
       "fabricante_id": null,
       "masa": 10.0,
       "flujos_recursos": []
+    },
+    {
+      "id": "radr_vncl_s02_mauler",
+      "tipo": "Radar",
+      "subtipo": "MidRangeRadar",
+      "tamano": 2,
+      "grado": 2,
+      "nombre_loc_id": "item_NameRADR_VNCL_S04_Mauler",
+      "nombre_es": "Radar Mauler",
+      "nombre_ingles": "Mauler Radar",
+      "fabricante_id": null,
+      "masa": 4000.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 5,
+          "unidad": "SPowerSegmentResourceUnit"
+        },
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Coolant",
+          "cantidad_por_segundo": 0.0,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
     },
     {
       "id": "radr_nave_s02_snsr5x",
@@ -47923,6 +48079,34 @@
       ]
     },
     {
+      "id": "radr_wlop_s03_lephari",
+      "tipo": "Radar",
+      "subtipo": "MidRangeRadar",
+      "tamano": 3,
+      "grado": 3,
+      "nombre_loc_id": "item_Name_RADR_WLOP_S03_Lephari",
+      "nombre_es": "Lephari",
+      "nombre_ingles": "Lephari",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/wlop.json",
+      "masa": 950.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 8,
+          "unidad": "SPowerSegmentResourceUnit"
+        },
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Coolant",
+          "cantidad_por_segundo": 0.0,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
       "id": "radr_chco_s03_observermax",
       "tipo": "Radar",
       "subtipo": "MidRangeRadar",
@@ -48079,34 +48263,6 @@
           "direccion": "consumption",
           "recurso": "Power",
           "cantidad_por_segundo": 10,
-          "unidad": "SPowerSegmentResourceUnit"
-        },
-        {
-          "estado": "Online",
-          "direccion": "consumption",
-          "recurso": "Coolant",
-          "cantidad_por_segundo": 0.0,
-          "unidad": "SStandardResourceUnit"
-        }
-      ]
-    },
-    {
-      "id": "radr_wlop_s03_lephari",
-      "tipo": "Radar",
-      "subtipo": "MidRangeRadar",
-      "tamano": 3,
-      "grado": 3,
-      "nombre_loc_id": "item_Name_RADR_WLOP_S03_Lephari",
-      "nombre_es": null,
-      "nombre_ingles": null,
-      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/wlop.json",
-      "masa": 950.0,
-      "flujos_recursos": [
-        {
-          "estado": "Online",
-          "direccion": "consumption",
-          "recurso": "Power",
-          "cantidad_por_segundo": 8,
           "unidad": "SPowerSegmentResourceUnit"
         },
         {
@@ -50162,7 +50318,7 @@
       "tamano": 3,
       "grado": 2,
       "nombre_loc_id": "item_Name_SHLD_SECO_S03_ARMOR",
-      "nombre_es": "ARMOR",
+      "nombre_es": "Armadura",
       "nombre_ingles": "ARMOR",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.seco.json",
       "masa": 950.0,
@@ -50646,6 +50802,41 @@
       ]
     },
     {
+      "id": "shld_rsi_s04_polaris_scitem",
+      "tipo": "Shield",
+      "subtipo": "UNDEFINED",
+      "tamano": 4,
+      "grado": 1,
+      "nombre_loc_id": "item_NameSHLD_RSI_S04_Polaris",
+      "nombre_es": "Deterrent",
+      "nombre_ingles": "Deterrent",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.rsi.json",
+      "masa": 16000.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 6,
+          "unidad": "SPowerSegmentResourceUnit"
+        },
+        {
+          "estado": "Online",
+          "direccion": "generation",
+          "recurso": "Shield",
+          "cantidad_por_segundo": 47520.0,
+          "unidad": "SStandardResourceUnit"
+        },
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Coolant",
+          "cantidad_por_segundo": 0.0,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
       "id": "shld_orig_s04_890j_scitem",
       "tipo": "Shield",
       "subtipo": "UNDEFINED",
@@ -50669,41 +50860,6 @@
           "direccion": "generation",
           "recurso": "Shield",
           "cantidad_por_segundo": 26400.0,
-          "unidad": "SStandardResourceUnit"
-        },
-        {
-          "estado": "Online",
-          "direccion": "consumption",
-          "recurso": "Coolant",
-          "cantidad_por_segundo": 0.0,
-          "unidad": "SStandardResourceUnit"
-        }
-      ]
-    },
-    {
-      "id": "shld_rsi_s04_polaris_scitem",
-      "tipo": "Shield",
-      "subtipo": "UNDEFINED",
-      "tamano": 4,
-      "grado": 1,
-      "nombre_loc_id": "item_NameSHLD_ORIG_S04_890J_SCItem",
-      "nombre_es": "Glacis",
-      "nombre_ingles": "Glacis",
-      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.rsi.json",
-      "masa": 16000.0,
-      "flujos_recursos": [
-        {
-          "estado": "Online",
-          "direccion": "consumption",
-          "recurso": "Power",
-          "cantidad_por_segundo": 6,
-          "unidad": "SPowerSegmentResourceUnit"
-        },
-        {
-          "estado": "Online",
-          "direccion": "generation",
-          "recurso": "Shield",
-          "cantidad_por_segundo": 47520.0,
           "unidad": "SStandardResourceUnit"
         },
         {
@@ -56543,7 +56699,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Avenger_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Avenger)",
+      "nombre_es": "Lanzador de señuelos (Aegis Avenger)",
       "nombre_ingles": "Aegis Avenger - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56556,7 +56712,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Eclipse_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Eclipse)",
+      "nombre_es": "Lanzador de señuelos (Aegis Eclipse)",
       "nombre_ingles": "Aegis Eclipse - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56569,7 +56725,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Eclipse_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Eclipse)",
+      "nombre_es": "Lanzador de señuelos (Aegis Eclipse)",
       "nombre_ingles": "Aegis Eclipse - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56582,7 +56738,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56595,7 +56751,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56608,7 +56764,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56621,7 +56777,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56634,7 +56790,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56647,7 +56803,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56660,7 +56816,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56673,7 +56829,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56686,7 +56842,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56699,7 +56855,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56712,7 +56868,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56725,7 +56881,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56738,7 +56894,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56751,7 +56907,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56764,7 +56920,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56777,7 +56933,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.drak.json",
       "masa": 150.0,
@@ -56790,7 +56946,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56803,7 +56959,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56816,7 +56972,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56829,7 +56985,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56842,7 +56998,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56855,7 +57011,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56868,7 +57024,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56881,7 +57037,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56894,7 +57050,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56907,7 +57063,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56920,7 +57076,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56933,7 +57089,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56946,7 +57102,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56959,7 +57115,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56972,7 +57128,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -56985,7 +57141,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/mrai.json",
       "masa": 150.0,
@@ -56998,7 +57154,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57011,7 +57167,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57024,7 +57180,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57037,7 +57193,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57050,7 +57206,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57063,7 +57219,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57076,7 +57232,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57089,7 +57245,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.rsi.json",
       "masa": 150.0,
@@ -57102,7 +57258,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57115,7 +57271,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57128,7 +57284,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Hammerhead_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Hammerhead)",
+      "nombre_es": "Lanzador de señuelos (Aegis Hammerhead)",
       "nombre_ingles": "Aegis Hammerhead - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57141,7 +57297,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Hammerhead_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Hammerhead)",
+      "nombre_es": "Lanzador de señuelos (Aegis Hammerhead)",
       "nombre_ingles": "Aegis Hammerhead - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57154,7 +57310,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Hammerhead_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Hammerhead)",
+      "nombre_es": "Lanzador de señuelos (Aegis Hammerhead)",
       "nombre_ingles": "Aegis Hammerhead - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57167,9 +57323,22 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Sabre_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Sabre)",
+      "nombre_es": "Lanzador de señuelos (Aegis Sabre)",
       "nombre_ingles": "Aegis Sabre - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
+      "masa": 150.0,
+      "flujos_recursos": []
+    },
+    {
+      "id": "vncl_cml_flare_large",
+      "tipo": "WeaponDefensive",
+      "subtipo": "CountermeasureLauncher",
+      "tamano": 1,
+      "grado": 1,
+      "nombre_loc_id": "item_NameVNCL_CML_Flare",
+      "nombre_es": "Lanzador de señuelos (Vanduul)",
+      "nombre_ingles": "Vanduul Decoy Launcher",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.vncl.json",
       "masa": 150.0,
       "flujos_recursos": []
     },
@@ -57313,19 +57482,6 @@
       "nombre_es": "Lanzaseñuelos (MISC Reliant)",
       "nombre_ingles": "MISC Reliant - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.misc.json",
-      "masa": 150.0,
-      "flujos_recursos": []
-    },
-    {
-      "id": "vncl_cml_flare_large",
-      "tipo": "WeaponDefensive",
-      "subtipo": "CountermeasureLauncher",
-      "tamano": 1,
-      "grado": 1,
-      "nombre_loc_id": "item_NameVNCL_CML_Flare",
-      "nombre_es": "Lanzaseñuelos vanduul",
-      "nombre_ingles": "Vanduul Decoy Launcher",
-      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.vncl.json",
       "masa": 150.0,
       "flujos_recursos": []
     },
@@ -57713,7 +57869,7 @@
       "tamano": 2,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57726,7 +57882,7 @@
       "tamano": 2,
       "grado": 1,
       "nombre_loc_id": "item_NameAEGS_Gladius_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (Aegis Gladius)",
+      "nombre_es": "Lanzador de señuelos (Aegis Gladius)",
       "nombre_ingles": "Aegis Gladius - Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.aegs.json",
       "masa": 150.0,
@@ -57739,7 +57895,7 @@
       "tamano": 2,
       "grado": 1,
       "nombre_loc_id": "item_NameRSI_CML_Flare",
-      "nombre_es": "Lanzaseñuelos (RSI)",
+      "nombre_es": "Lanzador de señuelos (RSI)",
       "nombre_ingles": "RSI Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.rsi.json",
       "masa": 150.0,
@@ -57752,7 +57908,7 @@
       "tamano": 2,
       "grado": 1,
       "nombre_loc_id": "item_NameVNCL_CML_Flare",
-      "nombre_es": "Lanzaseñuelos vanduul",
+      "nombre_es": "Lanzador de señuelos (Vanduul)",
       "nombre_ingles": "Vanduul Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.vncl.json",
       "masa": 150.0,
@@ -57765,7 +57921,7 @@
       "tamano": 2,
       "grado": 1,
       "nombre_loc_id": "item_NameVNCL_CML_Flare",
-      "nombre_es": "Lanzaseñuelos vanduul",
+      "nombre_es": "Lanzador de señuelos (Vanduul)",
       "nombre_ingles": "Vanduul Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.vncl.json",
       "masa": 150.0,
@@ -57778,7 +57934,7 @@
       "tamano": 2,
       "grado": 1,
       "nombre_loc_id": "item_NameVNCL_CML_Flare",
-      "nombre_es": "Lanzaseñuelos vanduul",
+      "nombre_es": "Lanzador de señuelos (Vanduul)",
       "nombre_ingles": "Vanduul Decoy Launcher",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.vncl.json",
       "masa": 150.0,
@@ -58071,6 +58227,27 @@
       ]
     },
     {
+      "id": "behr_lasercannon_s1_mr02",
+      "tipo": "WeaponGun",
+      "subtipo": "Gun",
+      "tamano": 1,
+      "grado": 1,
+      "nombre_loc_id": "item_NameBEHR_LaserCannon_S1_mr02",
+      "nombre_es": "Cañón M3A Camuflaje Raider",
+      "nombre_ingles": "M3A Cannon Raider Camo",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/personalweapons/scitemmanufacturer.behr.json",
+      "masa": 144.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 0.704,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
       "id": "mxox_neutroncannon_s1",
       "tipo": "WeaponGun",
       "subtipo": "Gun",
@@ -58308,6 +58485,27 @@
     },
     {
       "id": "hrst_laserrepeater_s1",
+      "tipo": "WeaponGun",
+      "subtipo": "Gun",
+      "tamano": 1,
+      "grado": 1,
+      "nombre_loc_id": "item_NameHRST_LaserRepeater_S1",
+      "nombre_es": "Láser de repetición Attrition I",
+      "nombre_ingles": "Attrition-1 Repeater",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/hrst.json",
+      "masa": 24.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 0.45,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
+      "id": "hrst_laserrepeater_s1_turret",
       "tipo": "WeaponGun",
       "subtipo": "Gun",
       "tamano": 1,
@@ -58719,6 +58917,27 @@
       ]
     },
     {
+      "id": "behr_lasercannon_s2_mr02",
+      "tipo": "WeaponGun",
+      "subtipo": "Gun",
+      "tamano": 2,
+      "grado": 1,
+      "nombre_loc_id": "item_NameBEHR_LaserCannon_S2_mr02",
+      "nombre_es": "Cañón M4A Camuflaje Raider",
+      "nombre_ingles": "M4A Cannon Raider Camo",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/personalweapons/scitemmanufacturer.behr.json",
+      "masa": 360.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 1.0,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
       "id": "behr_lasercannon_vng_s2",
       "tipo": "WeaponGun",
       "subtipo": "Gun",
@@ -59069,6 +59288,27 @@
       "nombre_es": "Láser de repetición Attrition II",
       "nombre_ingles": "Attrition-2 Repeater",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/hrst.json",
+      "masa": 60.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 0.6,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
+      "id": "banu_energyrepeater_s2",
+      "tipo": "WeaponGun",
+      "subtipo": "Gun",
+      "tamano": 2,
+      "grado": 1,
+      "nombre_loc_id": "item_NameKLWE_LaserRepeater_S2",
+      "nombre_es": "Láser de repetición CF-227 Badger",
+      "nombre_ingles": "CF-227 Badger Repeater",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/banu.json",
       "masa": 60.0,
       "flujos_recursos": [
         {
@@ -59493,6 +59733,27 @@
       ]
     },
     {
+      "id": "behr_lasercannon_s3_mr02",
+      "tipo": "WeaponGun",
+      "subtipo": "Gun",
+      "tamano": 3,
+      "grado": 1,
+      "nombre_loc_id": "item_NameBEHR_LaserCannon_S3_mr02",
+      "nombre_es": "Cañón M5A Camuflaje Raider",
+      "nombre_ingles": "M5A Cannon Raider Camo",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/personalweapons/scitemmanufacturer.behr.json",
+      "masa": 900.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 1.3,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
       "id": "amrs_lasercannon_s3",
       "tipo": "WeaponGun",
       "subtipo": "Gun",
@@ -59827,6 +60088,27 @@
     },
     {
       "id": "hrst_laserrepeater_s3",
+      "tipo": "WeaponGun",
+      "subtipo": "Gun",
+      "tamano": 3,
+      "grado": 1,
+      "nombre_loc_id": "item_NameHRST_LaserRepeater_S3",
+      "nombre_es": "Láser de repetición Attrition III",
+      "nombre_ingles": "Attrition-3 Repeater",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/hrst.json",
+      "masa": 150.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 0.75,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
+      "id": "hrst_laserrepeater_s3_turret",
       "tipo": "WeaponGun",
       "subtipo": "Gun",
       "tamano": 3,
@@ -60939,6 +61221,27 @@
       ]
     },
     {
+      "id": "amrs_lasercannon_s6_turret",
+      "tipo": "WeaponGun",
+      "subtipo": "Gun",
+      "tamano": 6,
+      "grado": 1,
+      "nombre_loc_id": "item_NameAMRS_LaserCannon_S6",
+      "nombre_es": "Cañón Omnisky XVIII",
+      "nombre_ingles": "Omnisky XVIII Cannon",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.amrs.json",
+      "masa": 14100.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 2.4,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
       "id": "prar_distortionscattergun_s6",
       "tipo": "WeaponGun",
       "subtipo": "Gun",
@@ -61380,6 +61683,27 @@
       ]
     },
     {
+      "id": "vncl_gen2_tachyoncannon_s7",
+      "tipo": "WeaponGun",
+      "subtipo": "Gun",
+      "tamano": 7,
+      "grado": 1,
+      "nombre_loc_id": "item_NameVNCL_Gen2_TachyonCannon_S7",
+      "nombre_es": "Cañón Vanduul Mauler «ERADICATOR»",
+      "nombre_ingles": "Vanduul Mauler 'ERADICATOR' Cannon",
+      "fabricante_id": null,
+      "masa": 0.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 3.6,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
       "id": "behr_ballisticcannon_s7_idris",
       "tipo": "WeaponGun",
       "subtipo": "Gun",
@@ -61443,27 +61767,6 @@
       ]
     },
     {
-      "id": "vncl_gen2_tachyoncannon_s7",
-      "tipo": "WeaponGun",
-      "subtipo": "Gun",
-      "tamano": 7,
-      "grado": 1,
-      "nombre_loc_id": "item_NameVNCL_Gen2_TachyonCannon_S7",
-      "nombre_es": "Vanduul Mauler 'ERADICATOR' Cannon",
-      "nombre_ingles": "Vanduul Mauler 'ERADICATOR' Cannon",
-      "fabricante_id": null,
-      "masa": 0.0,
-      "flujos_recursos": [
-        {
-          "estado": "Online",
-          "direccion": "consumption",
-          "recurso": "Power",
-          "cantidad_por_segundo": 3.6,
-          "unidad": "SStandardResourceUnit"
-        }
-      ]
-    },
-    {
       "id": "behr_lasercannon_s8",
       "tipo": "WeaponGun",
       "subtipo": "Gun",
@@ -61506,6 +61809,27 @@
       ]
     },
     {
+      "id": "vncl_gen2_plasmacannon_s8",
+      "tipo": "WeaponGun",
+      "subtipo": "Gun",
+      "tamano": 8,
+      "grado": 1,
+      "nombre_loc_id": "item_NameVNCL_Gen2_PlasmaCannon_S8",
+      "nombre_es": "Cañón Vanduul Mauler «RAGE»",
+      "nombre_ingles": "Vanduul Mauler 'RAGE' Cannon",
+      "fabricante_id": null,
+      "masa": 0.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 0.25,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
       "id": "rsi_perseus_ballisticcannon_b_s8",
       "tipo": "WeaponGun",
       "subtipo": "Gun",
@@ -61522,27 +61846,6 @@
           "direccion": "consumption",
           "recurso": "Power",
           "cantidad_por_segundo": 0.1,
-          "unidad": "SStandardResourceUnit"
-        }
-      ]
-    },
-    {
-      "id": "vncl_gen2_plasmacannon_s8",
-      "tipo": "WeaponGun",
-      "subtipo": "Gun",
-      "tamano": 8,
-      "grado": 1,
-      "nombre_loc_id": "item_NameVNCL_Gen2_PlasmaCannon_S8",
-      "nombre_es": "Vanduul Mauler 'RAGE' Cannon",
-      "nombre_ingles": "Vanduul Mauler 'RAGE' Cannon",
-      "fabricante_id": null,
-      "masa": 0.0,
-      "flujos_recursos": [
-        {
-          "estado": "Online",
-          "direccion": "consumption",
-          "recurso": "Power",
-          "cantidad_por_segundo": 0.25,
           "unidad": "SStandardResourceUnit"
         }
       ]
@@ -61606,6 +61909,27 @@
           "direccion": "consumption",
           "recurso": "Power",
           "cantidad_por_segundo": 1.0,
+          "unidad": "SStandardResourceUnit"
+        }
+      ]
+    },
+    {
+      "id": "vncl_gen2_tachyonbeam_s10",
+      "tipo": "WeaponGun",
+      "subtipo": "Gun",
+      "tamano": 10,
+      "grado": 1,
+      "nombre_loc_id": "item_NameVNCL_Gen2_TachyonCannon_S10",
+      "nombre_es": "Cañón Vanduul Mauler «ANNIHILATOR»",
+      "nombre_ingles": "Vanduul Mauler 'ANNIHILATOR' Cannon",
+      "fabricante_id": null,
+      "masa": 0.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 0.25,
           "unidad": "SStandardResourceUnit"
         }
       ]
@@ -61779,27 +62103,6 @@
       ]
     },
     {
-      "id": "vncl_gen2_tachyonbeam_s10",
-      "tipo": "WeaponGun",
-      "subtipo": "Gun",
-      "tamano": 10,
-      "grado": 1,
-      "nombre_loc_id": "item_NameVNCL_Gen2_TachyonCannon_S10",
-      "nombre_es": "Vanduul Mauler 'ANNIHILATOR' Cannon",
-      "nombre_ingles": "Vanduul Mauler 'ANNIHILATOR' Cannon",
-      "fabricante_id": null,
-      "masa": 0.0,
-      "flujos_recursos": [
-        {
-          "estado": "Online",
-          "direccion": "consumption",
-          "recurso": "Power",
-          "cantidad_por_segundo": 0.25,
-          "unidad": "SStandardResourceUnit"
-        }
-      ]
-    },
-    {
       "id": "behr_massdriver_s12",
       "tipo": "WeaponGun",
       "subtipo": "Gun",
@@ -61817,27 +62120,6 @@
           "recurso": "Power",
           "cantidad_por_segundo": 5.6,
           "unidad": "SStandardResourceUnit"
-        }
-      ]
-    },
-    {
-      "id": "mining_laser_shin_klein_s0",
-      "tipo": "WeaponMining",
-      "subtipo": "Gun",
-      "tamano": 0,
-      "grado": 1,
-      "nombre_loc_id": "item_NameMining_Head_S00_Klein_SCItem",
-      "nombre_es": "Lawson Mining Laser",
-      "nombre_ingles": "Lawson Mining Laser",
-      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/shin.json",
-      "masa": 1.0,
-      "flujos_recursos": [
-        {
-          "estado": "Online",
-          "direccion": "consumption",
-          "recurso": "Power",
-          "cantidad_por_segundo": 1,
-          "unidad": "SPowerSegmentResourceUnit"
         }
       ]
     },
@@ -61872,6 +62154,27 @@
       "nombre_es": "Láser de minería Arbor MHV",
       "nombre_ingles": "Arbor MHV Mining Laser",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/grin.json",
+      "masa": 1.0,
+      "flujos_recursos": [
+        {
+          "estado": "Online",
+          "direccion": "consumption",
+          "recurso": "Power",
+          "cantidad_por_segundo": 1,
+          "unidad": "SPowerSegmentResourceUnit"
+        }
+      ]
+    },
+    {
+      "id": "mining_laser_shin_klein_s0",
+      "tipo": "WeaponMining",
+      "subtipo": "Gun",
+      "tamano": 0,
+      "grado": 1,
+      "nombre_loc_id": "item_NameMining_Head_S00_Klein_SCItem",
+      "nombre_es": "Láser de minería Lawson",
+      "nombre_ingles": "Lawson Mining Laser",
+      "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/shin.json",
       "masa": 1.0,
       "flujos_recursos": [
         {
@@ -62121,7 +62424,7 @@
       "tamano": 1,
       "grado": 1,
       "nombre_loc_id": "item_Mining_MiningLaser_Drake_Default_S0",
-      "nombre_es": "Pitman Mining Laser",
+      "nombre_es": "Láser minero Pitman",
       "nombre_ingles": "Pitman Mining Laser",
       "fabricante_id": "file://./../../../../../../../libs/foundry/records/scitemmanufacturer/scitemmanufacturer.drak.json",
       "masa": 1.0,
