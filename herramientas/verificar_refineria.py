@@ -44,7 +44,8 @@ def cargar_ini(ruta: Path) -> tuple[dict[str, str], list[str]]:
 
 
 def main() -> int:
-    valores, duplicadas = cargar_ini(GLOBAL_INI)
+    global_ini = Path(sys.argv[1]) if len(sys.argv) > 1 else GLOBAL_INI
+    valores, duplicadas = cargar_ini(global_ini)
     errores = []
     for clave, esperado in ESPERADO.items():
         actual = valores.get(clave)

@@ -1,7 +1,7 @@
 """Comprueba la integridad del catálogo español frente al inglés de LIVE o PTU.
 
 Uso:
-    python herramientas/verificar_localizacion.py RUTA_AL_GLOBAL_INGLES
+    python herramientas/verificar_localizacion.py RUTA_AL_GLOBAL_INGLES [GLOBAL_ES]
 """
 
 from __future__ import annotations
@@ -77,7 +77,9 @@ def load_entries(
 
 
 def compare_with_english(
-    spanish: dict[str, tuple[int, str]], english: dict[str, tuple[int, str]]
+    spanish: dict[str, tuple[int, str]],
+    english: dict[str, tuple[int, str]],
+    spanish_name: str = "global.ini",
 ) -> list[str]:
     errors: list[str] = []
 
@@ -90,7 +92,7 @@ def compare_with_english(
 
         if english_value and not spanish_value:
             errors.append(
-                f"global.ini:{spanish_line}: {key} está vacía, pero el inglés contiene texto"
+                f"{spanish_name}:{spanish_line}: {key} está vacía, pero el inglés contiene texto"
             )
 
         english_macros = Counter(MISSION_MACRO_RE.findall(english_value))
@@ -98,14 +100,14 @@ def compare_with_english(
         missing_macros = english_macros - spanish_macros
         if missing_macros:
             errors.append(
-                f"global.ini:{spanish_line}: {key} omite macros {dict(missing_macros)}"
+                f"{spanish_name}:{spanish_line}: {key} omite macros {dict(missing_macros)}"
             )
 
         english_printf = Counter(PRINTF_RE.findall(english_value))
         spanish_printf = Counter(PRINTF_RE.findall(spanish_value))
         if english_printf != spanish_printf and key not in PTU_UNUSED_PRINTF_KEYS:
             errors.append(
-                f"global.ini:{spanish_line}: {key} altera parámetros printf: "
+                f"{spanish_name}:{spanish_line}: {key} altera parámetros printf: "
                 f"inglés={dict(english_printf)}, español={dict(spanish_printf)}"
             )
 
@@ -115,14 +117,15 @@ def compare_with_english(
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("english_global", type=Path)
+    parser.add_argument("spanish_global", type=Path, nargs="?", default=SPANISH_PATH)
     args = parser.parse_args()
 
-    spanish, errors = load_entries(SPANISH_PATH, validate_format_tags=True)
+    spanish, errors = load_entries(args.spanish_global, validate_format_tags=True)
     english, english_errors = load_entries(
         args.english_global, reject_replacement_characters=False
     )
     errors.extend(f"catálogo inglés: {error}" for error in english_errors)
-    errors.extend(compare_with_english(spanish, english))
+    errors.extend(compare_with_english(spanish, english, args.spanish_global.name))
 
     if errors:
         print(f"ERROR: {len(errors)} problemas de integridad:")

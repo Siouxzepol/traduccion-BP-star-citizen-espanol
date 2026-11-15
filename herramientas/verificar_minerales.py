@@ -1,6 +1,6 @@
 """Evita etiquetas cruzadas en los minerales minables de Star Citizen.
 
-Uso: python herramientas/verificar_minerales.py
+Uso: python herramientas/verificar_minerales.py [GLOBAL_ES]
 """
 
 from pathlib import Path
@@ -59,7 +59,8 @@ def read_entries(path: Path) -> dict[str, str]:
 
 
 def main() -> int:
-    entries = read_entries(GLOBAL_INI)
+    global_ini = Path(sys.argv[1]) if len(sys.argv) > 1 else GLOBAL_INI
+    entries = read_entries(global_ini)
     errors: list[str] = []
 
     for mineral_id, expected_name in EXPECTED_MINEABLES.items():

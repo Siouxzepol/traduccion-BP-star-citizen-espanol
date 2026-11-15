@@ -4,7 +4,9 @@ Traducción comunitaria no oficial para Star Citizen. El mismo paquete incluye l
 
 ## Compatibilidad y versión de la traducción
 
-**LIVE 4.10.3 · PTU 5.0 · Traducción: v1.0.45** — Actualizado el 15/11/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
+**LIVE 4.10.3 · PTU 5.0 · Traducción: v1.0.46** — Actualizado el 15/11/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
+
+LIVE y PTU ya no comparten exactamente el mismo catálogo: el ZIP instala una variante comprobada para cada rama. El archivo [`global-live.ini`](global-live.ini) corresponde a LIVE 4.10.200.58746 y [`global.ini`](global.ini) a PTU 5.0.201.16954.
 
 La localización añade marcadores `[BP]` y `[REP n]` a los títulos de misión cuando las recompensas son inequívocas para todas las variantes que comparten ese título. También añade reputación y posibles planos a ciertas descripciones de misión cuando pueden asociarse sin ambigüedad. Los planos pueden ser aleatorios y no se garantiza que se entreguen todos. El número de versión se incrementará con cada nueva publicación del parche.
 
@@ -27,11 +29,11 @@ No extraigas el ZIP dentro de `LIVE` ni de `PTU`, porque se duplicaría la carpe
 
 ## Instalación manual
 
-Si prefieres no usar el ZIP, copia el [`global.ini`](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/blob/main/global.ini) en una de estas rutas, guardando antes una copia del archivo original:
+Si prefieres no usar el ZIP, guarda antes una copia del archivo anterior y usa la variante correspondiente:
 
 ```text
-LIVE/data/Localization/spanish_(spain)/global.ini
-PTU/data/Localization/spanish_(spain)/global.ini
+global-live.ini → LIVE/data/Localization/spanish_(spain)/global.ini
+global.ini      → PTU/data/Localization/spanish_(spain)/global.ini
 ```
 
 Las actualizaciones del juego pueden sobrescribir el archivo o añadir cadenas nuevas; revisa este repositorio después de cada actualización.
@@ -50,7 +52,7 @@ Los nueve métodos conservan sus nombres originales en inglés. Sus combinacione
 
 ## Comprobación de ubicaciones
 
-Los nombres propios de sistemas, estaciones, instalaciones, asentamientos, concesiones mineras, circuitos, puntos de salto y destinos de tránsito se conservan en inglés, igual que los minerales. Ejecuta `python herramientas/verificar_ubicaciones.py` con el catálogo inglés de LIVE instalado para comprobar que las 1.000 ubicaciones protegidas coinciden exactamente con el original.
+Los nombres propios de sistemas, estaciones, instalaciones, asentamientos, concesiones mineras, circuitos, puntos de salto y destinos de tránsito se conservan en inglés, igual que los minerales. Ejecuta `python herramientas/verificar_ubicaciones.py RUTA_GLOBAL_INGLES RUTA_GLOBAL_ES` para comprobar que las 1.002 ubicaciones protegidas de LIVE coinciden exactamente con el original.
 
 ## Criterios para las publicaciones
 

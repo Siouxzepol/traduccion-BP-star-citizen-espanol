@@ -33,6 +33,13 @@ Pyro5b_Outpost_col_m_scrp_otlw_001\nPyro5c_Outpost_col_m_hmstd_indy_001\nPyro5d_
 )
 
 CLAVES_UBICACION |= frozenset(
+    {
+        "mission_location_nyx_socialstation_002a_0",
+        "Name_PotentialMarokLocation,P",
+    }
+)
+
+CLAVES_UBICACION |= frozenset(
     """
 NavPoint_AsteroidNavigation\nNavPoint_AsteroidTurret\nNavPoint_Escort\nNavPoint_PatrolArea\nNavPoint_QuantumTravel_01\nNavPoint_QuantumTravel_02\ninnerthought_levski_destination_borehole\ninnerthought_levski_destination_core\ninnerthought_levski_destination_customs\ninnerthought_levski_destination_garage_1\ninnerthought_levski_destination_garage_2\ninnerthought_levski_destination_garage_3\ninnerthought_levski_destination_garage_4\ninnerthought_levski_destination_garage_5\ninnerthought_levski_destination_hangar_1\ninnerthought_levski_destination_hangar_2\ninnerthought_levski_destination_hangar_3\ninnerthought_levski_destination_hangar_4\ninnerthought_levski_destination_landing_pads\ninnerthought_levski_destination_top_loby
 """.split()
@@ -81,13 +88,24 @@ def main() -> int:
         default=LIVE_INGLES,
         help="global.ini inglés; por defecto usa la instalación LIVE",
     )
+    parser.add_argument(
+        "spanish_global",
+        nargs="?",
+        type=Path,
+        default=GLOBAL_ES,
+        help="global.ini español; por defecto usa el archivo principal del repositorio",
+    )
     args = parser.parse_args()
 
     if not args.english_global.is_file():
         print(f"ERROR: no existe el catálogo inglés: {args.english_global}")
         return 2
 
-    espanol, duplicadas_es = cargar(GLOBAL_ES)
+    if not args.spanish_global.is_file():
+        print(f"ERROR: no existe el catálogo español: {args.spanish_global}")
+        return 2
+
+    espanol, duplicadas_es = cargar(args.spanish_global)
     ingles, duplicadas_en = cargar(args.english_global)
     claves_ubicacion = CLAVES_UBICACION | frozenset(
         clave for clave in ingles if clave.startswith(DYNAMIC_LOCATION_PREFIXES)
