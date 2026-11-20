@@ -4,9 +4,11 @@ Traducción comunitaria no oficial para Star Citizen. El mismo paquete incluye l
 
 ## Compatibilidad y versión de la traducción
 
-**LIVE 4.10.3 · PTU 5.0 · Traducción: v1.0.46** — Actualizado el 15/11/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
+**LIVE 4.10.3 · PTU 5.0 · Traducción: v1.0.47** — Actualizado el 20/11/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
 
-LIVE y PTU ya no comparten exactamente el mismo catálogo: el ZIP instala una variante comprobada para cada rama. El archivo [`global-live.ini`](global-live.ini) corresponde a LIVE 4.10.200.58746 y [`global.ini`](global.ini) a PTU 5.0.201.16954.
+LIVE y PTU ya no comparten exactamente el mismo catálogo: el ZIP instala una variante comprobada para cada rama. El archivo [`global-live.ini`](global-live.ini) corresponde a LIVE 4.10.201.48085 y [`global.ini`](global.ini) a PTU 5.0.202.205.
+
+La profesión `salvage` se denomina **chatarrería**; el proceso y sus herramientas usan **desguace**, y el material recuperado se denomina **chatarra** cuando corresponde. Los rótulos compactos de interacción, estancias, cubiertas y controles internos de las naves se conservan en inglés para evitar recortes en la interfaz.
 
 La localización añade marcadores `[BP]` y `[REP n]` a los títulos de misión cuando las recompensas son inequívocas para todas las variantes que comparten ese título. También añade reputación y posibles planos a ciertas descripciones de misión cuando pueden asociarse sin ambigüedad. Los planos pueden ser aleatorios y no se garantiza que se entreguen todos. El número de versión se incrementará con cada nueva publicación del parche.
 
