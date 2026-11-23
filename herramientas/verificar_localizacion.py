@@ -41,16 +41,22 @@ def load_entries(
     entries: dict[str, tuple[int, str]] = {}
     errors: list[str] = []
     raw_keys: set[str] = set()
+    last_key: str | None = None
 
     for line_number, line in enumerate(
         path.read_text(encoding="utf-8-sig").splitlines(), 1
     ):
         if "=" not in line:
-            errors.append(f"{path.name}:{line_number}: línea sin '='")
+            if last_key is not None and line.startswith(r"\n"):
+                original_line, original_value = entries[last_key]
+                entries[last_key] = (original_line, original_value + line)
+            else:
+                errors.append(f"{path.name}:{line_number}: línea sin '='")
             continue
 
         raw_key, value = line.split("=", 1)
         key = raw_key.removesuffix(",P")
+        last_key = key
         if raw_key in raw_keys:
             errors.append(f"{path.name}:{line_number}: clave duplicada {raw_key}")
         if key in entries:
@@ -58,9 +64,10 @@ def load_entries(
         raw_keys.add(raw_key)
         entries[key] = (line_number, value)
 
+    for key, (line_number, value) in entries.items():
         if reject_replacement_characters and "\ufffd" in value:
             errors.append(
-                f"{path.name}:{line_number}: carácter de sustitución Unicode en {raw_key}"
+                f"{path.name}:{line_number}: carácter de sustitución Unicode en {key}"
             )
 
         if validate_format_tags and not key.startswith("text_ui_tags_"):
@@ -69,7 +76,7 @@ def load_entries(
                 closed = value.count(f"</{tag}>")
                 if opened != closed:
                     errors.append(
-                        f"{path.name}:{line_number}: {raw_key} tiene etiquetas {tag} "
+                        f"{path.name}:{line_number}: {key} tiene etiquetas {tag} "
                         f"desequilibradas ({opened} aperturas, {closed} cierres)"
                     )
 

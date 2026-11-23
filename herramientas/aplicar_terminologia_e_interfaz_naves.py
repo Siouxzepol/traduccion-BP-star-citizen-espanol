@@ -127,10 +127,17 @@ def normalize(key: str) -> str:
 
 def load(path: Path) -> dict[str, str]:
     values: dict[str, str] = {}
+    last_key: str | None = None
     for line in path.read_text(encoding="utf-8-sig").splitlines():
         if "=" in line and not line.startswith((";", "[")):
             key, value = line.split("=", 1)
-            values[normalize(key)] = value
+            last_key = normalize(key)
+            values[last_key] = value
+        elif last_key is not None and line.startswith(r"\n"):
+            # Algunos catálogos oficiales de PTU dividen un valor largo en
+            # varias líneas físicas. Cada continuación ya conserva el escape
+            # literal ``\n``, por lo que basta con concatenarla.
+            values[last_key] += line
     return values
 
 

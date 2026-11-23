@@ -4,9 +4,9 @@ Traducción comunitaria no oficial para Star Citizen. El mismo paquete incluye l
 
 ## Compatibilidad y versión de la traducción
 
-**LIVE 4.10.3 · PTU 5.0 · Traducción: v1.0.47** — Actualizado el 20/11/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
+**LIVE 4.10.3 · PTU 5.0 · Traducción: v1.0.48** — Actualizado el 23/11/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
 
-LIVE y PTU ya no comparten exactamente el mismo catálogo: el ZIP instala una variante comprobada para cada rama. El archivo [`global-live.ini`](global-live.ini) corresponde a LIVE 4.10.201.48085 y [`global.ini`](global.ini) a PTU 5.0.202.205.
+LIVE y PTU ya no comparten exactamente el mismo catálogo: el ZIP instala una variante comprobada para cada rama. El archivo [`global-live.ini`](global-live.ini) corresponde a LIVE 4.10.201.48085 y [`global.ini`](global.ini) a PTU 5.0.202.10025.
 
 La profesión `salvage` se denomina **chatarrería**; el proceso y sus herramientas usan **desguace**, y el material recuperado se denomina **chatarra** cuando corresponde. Los rótulos compactos de interacción, estancias, cubiertas y controles internos de las naves se conservan en inglés para evitar recortes en la interfaz.
 
@@ -54,7 +54,7 @@ Los nueve métodos conservan sus nombres originales en inglés. Sus combinacione
 
 ## Comprobación de ubicaciones
 
-Los nombres propios de sistemas, estaciones, instalaciones, asentamientos, concesiones mineras, circuitos, puntos de salto y destinos de tránsito se conservan en inglés, igual que los minerales. Ejecuta `python herramientas/verificar_ubicaciones.py RUTA_GLOBAL_INGLES RUTA_GLOBAL_ES` para comprobar que las 1.002 ubicaciones protegidas de LIVE coinciden exactamente con el original.
+Los nombres propios de sistemas, estaciones, instalaciones, asentamientos, concesiones mineras, circuitos, puntos de salto y destinos de tránsito se conservan en inglés, igual que los minerales. Ejecuta `python herramientas/verificar_ubicaciones.py RUTA_GLOBAL_INGLES RUTA_GLOBAL_ES` para comprobar que las 1.002 ubicaciones protegidas de LIVE o las 2.419 de PTU coinciden exactamente con el original.
 
 ## Criterios para las publicaciones
 
