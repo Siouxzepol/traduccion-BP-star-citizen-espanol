@@ -4,7 +4,7 @@ Traducción comunitaria no oficial para Star Citizen. El mismo paquete incluye l
 
 ## Compatibilidad y versión de la traducción
 
-**LIVE 4.10.3 · PTU 5.0 · Traducción: v1.0.51** — Actualizado el 24/11/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
+**LIVE 4.10.3 · PTU 5.0 · Traducción: v1.0.52** — Actualizado el 24/11/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
 
 LIVE y PTU ya no comparten exactamente el mismo catálogo: el ZIP instala una variante comprobada para cada rama. El archivo [`global-live.ini`](global-live.ini) corresponde a LIVE 4.10.201.48085 y [`global.ini`](global.ini) a PTU 5.0.202.10025.
 
@@ -14,7 +14,7 @@ En la vestimenta, `Undersuit` y `Undersuits` se conservan en inglés. Las piezas
 
 Los grados de material de construcción se conservan en inglés para no confundir `Construction Rubble`, `Construction Pieces` y `Construction Salvage` entre sí ni con el producto refinado `Construction Materials`.
 
-La localización añade marcadores `[BP]` y `[REP n]` a los títulos de misión cuando las recompensas son inequívocas para todas las variantes que comparten ese título. También añade reputación y posibles planos a ciertas descripciones de misión cuando pueden asociarse sin ambigüedad. Los planos pueden ser aleatorios y no se garantiza que se entreguen todos. El número de versión se incrementará con cada nueva publicación del parche.
+La localización añade `[BP]` cuando todas las variantes que comparten un título conceden planos y `[BP?]` cuando solo algunas variantes pueden concederlos. El marcador `[REP n]` se añade únicamente cuando la cantidad de reputación es inequívoca para todas las variantes. También se detallan la reputación y los posibles planos en las descripciones que pueden asociarse sin ambigüedad. Los planos pueden ser aleatorios y no se garantiza que se entreguen todos. El número de versión se incrementará con cada nueva publicación del parche.
 
 ## Instalación sencilla (LIVE y PTU)
 

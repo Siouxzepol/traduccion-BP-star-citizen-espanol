@@ -23,12 +23,26 @@ REWARD_BLOCK_RE = re.compile(r"\\n\\n(?:<EM4>)?RECOMPENSAS DEL CONTRATO(?:</EM4>
 TITLE_MARKER_RE = re.compile(r"^(?:<EM\d+>)?\[(?:BP\??|REP\s+[^\]]+)\](?:</EM\d+>)?\s*")
 PLACEHOLDER_TOKENS = {"", "@LOC_PLACEHOLDER", "@LOC_UNINITIALIZED"}
 
+# Estas claves están referenciadas por contratos activos pero CIG no las
+# publica en el catálogo inglés. Se añaden con títulos neutros para evitar que
+# el juego muestre el identificador interno y para poder etiquetar sus BP.
+MISSING_TITLE_OVERRIDES = {
+    "EckhartSecurity_RetrieveItem_Title": "Recuperar el objeto",
+    "cfp_EliminateAllFF_Title_001": "Eliminar a los Frontier Fighters",
+    "Headhunters_EliminateAllFF_Title_001": "Eliminar a los Frontier Fighters",
+}
+
 
 def title_reward_tags(contracts: list[dict]) -> list[str]:
     """Return only title tags that are accurate for every shared-title variant."""
     tags = []
-    if contracts and all(contract.get("planos") for contract in contracts):
+    blueprint_flags = [bool(contract.get("planos")) for contract in contracts]
+    if blueprint_flags and all(blueprint_flags):
         tags.append("[BP]")
+    elif any(blueprint_flags):
+        # Varias definiciones pueden compartir el mismo título aunque solo
+        # algunas concedan planos. La interrogación informa sin prometer un BP.
+        tags.append("[BP?]")
 
     standing_amounts = []
     for contract in contracts:
@@ -51,8 +65,18 @@ def reward_signature(contract: dict) -> tuple:
         for r in contract.get("reputacion", [])
     ))
     blueprints = tuple(sorted(
-        (p.get("pool"), p.get("probabilidad"))
-        for p in contract.get("planos", [])
+        [
+            (
+                p.get("pool"),
+                p.get("probabilidad"),
+                tuple(sorted(
+                    (option.get("id"), option.get("objeto_id"))
+                    for option in p.get("opciones", [])
+                )),
+            )
+            for p in contract.get("planos", [])
+        ],
+        key=repr,
     ))
     return reputation, blueprints
 
@@ -187,7 +211,7 @@ def load_strings(path: Path | None) -> dict[str, str]:
     for line in path.read_text(encoding="utf-8-sig", errors="replace").splitlines():
         if line and not line.lstrip().startswith((";", "#")) and "=" in line:
             key, value = line.split("=", 1)
-            values[key.strip()] = value.strip()
+            values[key.strip().removesuffix(",P")] = value.strip()
     return values
 
 
@@ -231,6 +255,15 @@ def main() -> int:
         if match:
             values[match.group(1).strip()] = match.group(3)
 
+    # Algunos contratos referencian títulos que no existen en el global.ini
+    # oficial. Los añadimos al final para que sean legibles y etiquetables.
+    if lines and not lines[-1].endswith(("\n", "\r")):
+        lines[-1] += newline
+    for title_key, fallback_title in MISSING_TITLE_OVERRIDES.items():
+        if title_key in groups and title_key not in values:
+            lines.append(f"{title_key}={fallback_title}{newline}")
+            values[title_key] = fallback_title
+
     updates: dict[str, str] = {}
     managed_description_keys: set[str] = set()
     title_updates: dict[str, list[str]] = {}
@@ -259,6 +292,7 @@ def main() -> int:
     written = 0
     titles_written = 0
     bp_titles = 0
+    possible_bp_titles = 0
     rep_titles = 0
     result = []
     for line in lines:
@@ -276,6 +310,7 @@ def main() -> int:
             result.append(key + suffix + "=" + localized_value + ending)
             titles_written += int(bool(tags))
             bp_titles += int("[BP]" in tags)
+            possible_bp_titles += int("[BP?]" in tags)
             rep_titles += int(any(tag.startswith("[REP ") for tag in tags))
         elif match and match.group(1).strip() in managed_description_keys:
             key, suffix, value = match.group(1), match.group(2) or "", match.group(3)
@@ -291,7 +326,11 @@ def main() -> int:
     output_bytes = "".join(result).encode("utf-8")
     # global.ini in this repository is distributed as UTF-8 with a BOM.
     ini_path.write_bytes((b"\xef\xbb\xbf" if has_bom or ini_path.name.lower() == "global.ini" else b"") + output_bytes)
-    print(f"Títulos etiquetados: {titles_written} ({bp_titles} con [BP], {rep_titles} con [REP n])")
+    print(
+        f"Títulos etiquetados: {titles_written} "
+        f"({bp_titles} con [BP], {possible_bp_titles} con [BP?], "
+        f"{rep_titles} con [REP n])"
+    )
     print(f"Descripciones actualizadas: {written}")
     print(f"Claves de misión ambiguas omitidas: {skipped_ambiguous}")
     return 0

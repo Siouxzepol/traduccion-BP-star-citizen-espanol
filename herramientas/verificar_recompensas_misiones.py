@@ -16,7 +16,7 @@ from pathlib import Path
 import integrar_recompensas_misiones as rewards
 
 
-MARKER_RE = re.compile(r"^<EM\d+>(\[(?:BP|REP\s+[^\]]+)\])</EM\d+>\s*")
+MARKER_RE = re.compile(r"^<EM\d+>(\[(?:BP\??|REP\s+[^\]]+)\])</EM\d+>\s*")
 SPANISH_BP_WORDS_RE = re.compile(
     r"\b(?:brazales|coraza|perneras|casco|equipo de|láser|minero|minera|"
     r"cargador|bater[ií]a|herramienta|arboleda|magnetita|mediana|pesada|ligera|"
@@ -52,6 +52,7 @@ def main() -> int:
     blueprint_to_item: dict[str, set[str]] = defaultdict(set)
     item_to_names: dict[str, set[str]] = defaultdict(set)
     option_count = 0
+    contracts_with_blueprints = 0
     fallback_items: set[str] = set()
     visible_name_collisions = 0
 
@@ -71,6 +72,8 @@ def main() -> int:
             if not entry.get("faccion_loc_id") or not entry.get("ambito_loc_id") or entry.get("cantidad") is None:
                 errors.append(f"Reputación incompleta en {contract.get('contrato_id')}: {entry!r}")
 
+        if contract.get("planos"):
+            contracts_with_blueprints += 1
         for pool in contract.get("planos", []):
             identities = []
             visible_names = []
@@ -119,14 +122,22 @@ def main() -> int:
 
     checked_descriptions = 0
     ambiguous_descriptions = 0
+    definite_bp_groups = 0
+    possible_bp_groups = 0
     for title_key, variants in groups.items():
         expected_tags = rewards.title_reward_tags(variants)
+        if "[BP]" in expected_tags:
+            definite_bp_groups += 1
+        elif "[BP?]" in expected_tags:
+            possible_bp_groups += 1
         if title_key in strings:
             actual_tags = markers(strings[title_key])
             if actual_tags != expected_tags:
                 errors.append(
                     f"Etiquetas incorrectas en {title_key}: {actual_tags!r}; esperado {expected_tags!r}"
                 )
+        elif any(contract.get("planos") for contract in variants):
+            errors.append(f"Título con BP ausente del catálogo: {title_key}")
 
         description_key = next(
             (key for key in rewards.candidate_description_keys(title_key) if key in strings),
@@ -159,6 +170,10 @@ def main() -> int:
 
     print(f"Contratos revisados: {len(contracts)}")
     print(f"Grupos de títulos revisados: {len(groups)}")
+    print(
+        f"Contratos con BP: {contracts_with_blueprints}; grupos seguros [BP]: "
+        f"{definite_bp_groups}; grupos variables [BP?]: {possible_bp_groups}"
+    )
     print(f"Opciones de BP revisadas: {option_count} ({len(blueprint_to_item)} BP únicos)")
     print(f"Descripciones exactas revisadas: {checked_descriptions}")
     print(f"Descripciones ambiguas sin anotación: {ambiguous_descriptions}")
