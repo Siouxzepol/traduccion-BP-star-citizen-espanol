@@ -42,19 +42,19 @@ CONTEXT_OVERRIDES = {
     "itemPort_Armor_Helmet": "Casco",
     "itemPort_Armor_Legs": "Piernas",
     "itemPort_Armor_Torso": "Pecho",
-    "itemPort_Armor_Undersuit": "Traje interior",
+    "itemPort_Armor_Undersuit": "Undersuit",
     "item_TypeChar_Armor_Arms": "Brazos",
     "item_TypeChar_Armor_Helmet": "Cascos",
     "item_TypeChar_Armor_Legs": "Piernas",
     "item_TypeChar_Armor_Torso": "Pecho",
-    "item_TypeChar_Armor_Undersuit": "Trajes interiores",
+    "item_TypeChar_Armor_Undersuit": "Undersuits",
     "item_displayType_ArmorArms": "Brazos",
     "item_displayType_ArmorCore": "Pecho",
     "item_displayType_ArmorHands": "Manos",
     "item_displayType_ArmorLegs": "Piernas",
     "item_displayType_Headwear": "Sombreros",
     "item_displayType_Helmet": "Casco",
-    "item_displayType_Undersuit": "Traje interior",
+    "item_displayType_Undersuit": "Undersuit",
     "ui_inventory_filter_category_name_armor_arms": "Brazos",
     "ui_inventory_filter_category_name_armor_core": "Pecho",
     "ui_inventory_filter_category_name_armor_helmets": "Cascos",
@@ -65,7 +65,7 @@ CONTEXT_OVERRIDES = {
     "ui_inventory_filter_category_name_clothing_legs": "Pantalones",
     "ui_inventory_filter_category_name_clothing_torso0": "Camisetas",
     "ui_inventory_filter_category_name_clothing_torso1": "Chaquetas",
-    "ui_inventory_filter_category_name_undersuits": "Trajes interiores",
+    "ui_inventory_filter_category_name_undersuits": "Undersuits",
     "PU_SHIPDEALER2_M_CP_Pitch_ShipNameComment_Nova_IG_001_AnotherBangerFrom": (
         "Otro bombazo de Tumbril: el Nova es una actualización moderna del "
         "tanque de batalla clásico. Puede atacar objetivos terrestres o aéreos, "
@@ -242,10 +242,14 @@ def normalize_salvage(value: str) -> str:
 def normalize_clothing(key: str, value: str) -> str:
     """Usa términos inequívocos para las capas y piezas de armadura personal."""
     replacements = (
-        ("Sototrajes", "Trajes interiores"),
-        ("sototrajes", "trajes interiores"),
-        ("Sototraje", "Traje interior"),
-        ("sototraje", "traje interior"),
+        ("Trajes interiores", "Undersuits"),
+        ("trajes interiores", "undersuits"),
+        ("Traje interior", "Undersuit"),
+        ("traje interior", "undersuit"),
+        ("Sototrajes", "Undersuits"),
+        ("sototrajes", "undersuits"),
+        ("Sototraje", "Undersuit"),
+        ("sototraje", "undersuit"),
     )
     for old, new in replacements:
         value = value.replace(old, new)
@@ -272,7 +276,7 @@ def normalize_clothing(key: str, value: str) -> str:
 
     if any(
         term in value.casefold()
-        for term in ("traje interior", "brazos ", "pecho ", "piernas ")
+        for term in ("undersuit", "brazos ", "pecho ", "piernas ")
     ):
         value = value.rstrip()
 

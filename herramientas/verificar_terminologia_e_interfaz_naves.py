@@ -15,22 +15,24 @@ EXPECTED_BODY_LABELS = {
     "itemPort_Armor_Helmet": "Casco",
     "itemPort_Armor_Legs": "Piernas",
     "itemPort_Armor_Torso": "Pecho",
-    "itemPort_Armor_Undersuit": "Traje interior",
+    "itemPort_Armor_Undersuit": "Undersuit",
     "item_TypeChar_Armor_Arms": "Brazos",
     "item_TypeChar_Armor_Helmet": "Cascos",
     "item_TypeChar_Armor_Legs": "Piernas",
     "item_TypeChar_Armor_Torso": "Pecho",
-    "item_TypeChar_Armor_Undersuit": "Trajes interiores",
+    "item_TypeChar_Armor_Undersuit": "Undersuits",
     "item_displayType_ArmorArms": "Brazos",
     "item_displayType_ArmorCore": "Pecho",
     "item_displayType_ArmorHands": "Manos",
     "item_displayType_ArmorLegs": "Piernas",
     "item_displayType_Headwear": "Sombreros",
+    "item_displayType_Undersuit": "Undersuit",
     "ui_inventory_filter_category_name_armor_arms": "Brazos",
     "ui_inventory_filter_category_name_armor_core": "Pecho",
     "ui_inventory_filter_category_name_armor_helmets": "Cascos",
     "ui_inventory_filter_category_name_armor_legs": "Piernas",
     "ui_inventory_filter_category_name_clothing_legs": "Pantalones",
+    "ui_inventory_filter_category_name_undersuits": "Undersuits",
 }
 
 
@@ -53,6 +55,8 @@ def main() -> int:
             errors.append(f"{key}: conserva la palabra 'salvamento'")
         if "sototraje" in value.casefold():
             errors.append(f"{key}: conserva la palabra 'sototraje'")
+        if "traje interior" in value.casefold() or "trajes interiores" in value.casefold():
+            errors.append(f"{key}: conserva la traducción de 'undersuit'")
         if "brazales" in value.casefold():
             errors.append(f"{key}: conserva la palabra ambigua 'brazales'")
         if key.casefold().startswith("item_") and "name" in key.casefold():
@@ -69,7 +73,8 @@ def main() -> int:
 
     protected = sum(1 for key in spanish if is_ship_ui(key) and key in english)
     print(
-        f"OK: no quedan 'salvamento', 'sototraje' ni 'brazales'; {protected} "
+        f"OK: no quedan 'salvamento', 'sototraje', 'traje interior' ni "
+        f"'brazales'; {protected} "
         "rótulos compactos de nave se conservan en inglés."
     )
     return 0
