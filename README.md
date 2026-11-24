@@ -4,7 +4,7 @@ Traducción comunitaria no oficial para Star Citizen. El mismo paquete incluye l
 
 ## Compatibilidad y versión de la traducción
 
-**LIVE 4.10.3 · PTU 5.0 · Traducción: v1.0.53** — Actualizado el 24/11/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
+**LIVE 4.10.3 · PTU 5.0 · Traducción: v1.0.54** — Actualizado el 24/11/2026. [Descargar el parche](https://github.com/Siouxzepol/traduccion-BP-star-citizen-espanol/releases/latest/download/Traduccion_SC_es-ES_LIVE.zip).
 
 LIVE y PTU ya no comparten exactamente el mismo catálogo: el ZIP instala una variante comprobada para cada rama. El archivo [`global-live.ini`](global-live.ini) corresponde a LIVE 4.10.201.48085 y [`global.ini`](global.ini) a PTU 5.0.202.10025.
 
