@@ -37,7 +37,35 @@ CONTEXT_OVERRIDES = {
     "mission_location_stanton_0307": "una chatarrería en Daymar",
     "mission_location_stanton_0310": "una chatarrería en Wala",
     "mission_location_stanton_0428": "una chatarrería en Euterpe",
-    "items_commodities_ConstructionMaterialsChunks": "Escombros de construcción",
+    "items_commodities_ConstructionMaterialsChunks": "Construction Salvage",
+    "itemPort_Armor_Arms": "Brazos",
+    "itemPort_Armor_Helmet": "Casco",
+    "itemPort_Armor_Legs": "Piernas",
+    "itemPort_Armor_Torso": "Pecho",
+    "itemPort_Armor_Undersuit": "Traje interior",
+    "item_TypeChar_Armor_Arms": "Brazos",
+    "item_TypeChar_Armor_Helmet": "Cascos",
+    "item_TypeChar_Armor_Legs": "Piernas",
+    "item_TypeChar_Armor_Torso": "Pecho",
+    "item_TypeChar_Armor_Undersuit": "Trajes interiores",
+    "item_displayType_ArmorArms": "Brazos",
+    "item_displayType_ArmorCore": "Pecho",
+    "item_displayType_ArmorHands": "Manos",
+    "item_displayType_ArmorLegs": "Piernas",
+    "item_displayType_Headwear": "Sombreros",
+    "item_displayType_Helmet": "Casco",
+    "item_displayType_Undersuit": "Traje interior",
+    "ui_inventory_filter_category_name_armor_arms": "Brazos",
+    "ui_inventory_filter_category_name_armor_core": "Pecho",
+    "ui_inventory_filter_category_name_armor_helmets": "Cascos",
+    "ui_inventory_filter_category_name_armor_legs": "Piernas",
+    "ui_inventory_filter_category_name_clothing_feet": "Calzado",
+    "ui_inventory_filter_category_name_clothing_hands": "Guantes",
+    "ui_inventory_filter_category_name_clothing_hats": "Sombreros",
+    "ui_inventory_filter_category_name_clothing_legs": "Pantalones",
+    "ui_inventory_filter_category_name_clothing_torso0": "Camisetas",
+    "ui_inventory_filter_category_name_clothing_torso1": "Chaquetas",
+    "ui_inventory_filter_category_name_undersuits": "Trajes interiores",
     "PU_SHIPDEALER2_M_CP_Pitch_ShipNameComment_Nova_IG_001_AnotherBangerFrom": (
         "Otro bombazo de Tumbril: el Nova es una actualización moderna del "
         "tanque de batalla clásico. Puede atacar objetivos terrestres o aéreos, "
@@ -46,10 +74,6 @@ CONTEXT_OVERRIDES = {
     "interaction_condition_equipArmorArms_wearingArms": (
         "Quítate la armadura de brazos"
     ),
-    "itemPort_Armor_Arms": "Armadura de brazos",
-    "item_TypeChar_Armor_Arms": "Armadura de brazos",
-    "item_displayType_ArmorArms": "Armadura de brazos",
-    "ui_inventory_filter_category_name_armor_arms": "Armadura de brazos",
     "item_Desc_hdh_jacket_11": (
         "Capacidad de carga: 1K µSCU\\n\\nLa Sharud es una prenda superior ideal "
         "para mantenerse fresco con tiempo caluroso. Las técnicas de producción "
@@ -231,16 +255,25 @@ def normalize_clothing(key: str, value: str) -> str:
     value = value.replace("Brazales ajustables", "Puños ajustables")
     value = value.replace("brazales ajustables", "puños ajustables")
 
-    # Casi todas las apariciones de «Brazales» son nombres de piezas que
-    # ocupan el puerto de armadura de los brazos. «Armadura de brazos» evita
-    # confundirlas con joyería o con una prenda decorativa.
+    # Los nombres visibles de las piezas usan las mismas partes cortas que los
+    # filtros: Pecho, Brazos y Piernas. Las descripciones en prosa no se tocan.
     if key.casefold().startswith("item_") and "name" in key.casefold():
-        if value.startswith("Brazales "):
-            value = "Armadura de brazos " + value[len("Brazales ") :]
-        elif value == "Brazales":
-            value = "Armadura de brazos"
+        prefixes = (
+            ("Armadura de brazos ", "Brazos "),
+            ("Brazales ", "Brazos "),
+            ("Coraza ", "Pecho "),
+            ("Perneras ", "Piernas "),
+            ("Guanteletes ", "Manos "),
+        )
+        for old, new in prefixes:
+            if value.startswith(old):
+                value = new + value[len(old) :]
+                break
 
-    if "traje interior" in value.casefold() or "armadura de brazos" in value.casefold():
+    if any(
+        term in value.casefold()
+        for term in ("traje interior", "brazos ", "pecho ", "piernas ")
+    ):
         value = value.rstrip()
 
     return value
