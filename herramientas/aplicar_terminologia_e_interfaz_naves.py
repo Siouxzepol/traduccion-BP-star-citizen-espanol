@@ -38,6 +38,39 @@ CONTEXT_OVERRIDES = {
     "mission_location_stanton_0310": "una chatarrería en Wala",
     "mission_location_stanton_0428": "una chatarrería en Euterpe",
     "items_commodities_ConstructionMaterialsChunks": "Escombros de construcción",
+    "PU_SHIPDEALER2_M_CP_Pitch_ShipNameComment_Nova_IG_001_AnotherBangerFrom": (
+        "Otro bombazo de Tumbril: el Nova es una actualización moderna del "
+        "tanque de batalla clásico. Puede atacar objetivos terrestres o aéreos, "
+        "y el cañón principal es absolutamente ensordecedor. Es impresionante."
+    ),
+    "interaction_condition_equipArmorArms_wearingArms": (
+        "Quítate la armadura de brazos"
+    ),
+    "itemPort_Armor_Arms": "Armadura de brazos",
+    "item_TypeChar_Armor_Arms": "Armadura de brazos",
+    "item_displayType_ArmorArms": "Armadura de brazos",
+    "ui_inventory_filter_category_name_armor_arms": "Armadura de brazos",
+    "item_Desc_hdh_jacket_11": (
+        "Capacidad de carga: 1K µSCU\\n\\nLa Sharud es una prenda superior ideal "
+        "para mantenerse fresco con tiempo caluroso. Las técnicas de producción "
+        "avanzadas permiten a Habidash fabricar un chal ligero pero absorbente "
+        "que parece y se siente como algodón natural hilado a mano, pero a una "
+        "fracción del coste. Las tres piezas de antebrazo aportan acentos "
+        "elegantes y vienen con microchips incrustados que monitorizan la "
+        "temperatura corporal y otras constantes vitales."
+    ),
+    "item_Desc_outlaw_legacy_armor_light_arms_01_04_9tails": (
+        "Tipo: armadura ligera\\nReducción de daño: 20 %\\n"
+        "Rango térmico: -31 a 61 °C\\nProtección radiológica: 26 000 rem\\n"
+        "Tasa de eliminación radiológica: 145,8 rem/s\\n\\nSe trata de una "
+        "versión modificada de la armadura de brazos Lynx de Kastak Arms. La "
+        "armadura de combate Lynx se diseñó para preservar la movilidad del "
+        "usuario. Su tejido, compuesto por un polímero de tecnología punta, "
+        "permite soportar los daños iniciales mientras se pone a cubierto con "
+        "agilidad. La llamativa armadura saltó a la fama gracias al personaje "
+        "Rastreador, que la portaba en la popular serie «Fuego y furia» de "
+        "mediados del siglo XXIX."
+    ),
     "item_salvageHead_RSI_Salvation_Desc": (
         "Fabricante: Roberts Space Industries\\n"
         "Tipo de objeto: Cabezal de desguace\\n"
@@ -182,6 +215,37 @@ def normalize_salvage(value: str) -> str:
     return value
 
 
+def normalize_clothing(key: str, value: str) -> str:
+    """Usa términos inequívocos para las capas y piezas de armadura personal."""
+    replacements = (
+        ("Sototrajes", "Trajes interiores"),
+        ("sototrajes", "trajes interiores"),
+        ("Sototraje", "Traje interior"),
+        ("sototraje", "traje interior"),
+    )
+    for old, new in replacements:
+        value = value.replace(old, new)
+
+    # En monos de trabajo, «bracers» describe el ajuste de la manga, no una
+    # pieza de armadura independiente.
+    value = value.replace("Brazales ajustables", "Puños ajustables")
+    value = value.replace("brazales ajustables", "puños ajustables")
+
+    # Casi todas las apariciones de «Brazales» son nombres de piezas que
+    # ocupan el puerto de armadura de los brazos. «Armadura de brazos» evita
+    # confundirlas con joyería o con una prenda decorativa.
+    if key.casefold().startswith("item_") and "name" in key.casefold():
+        if value.startswith("Brazales "):
+            value = "Armadura de brazos " + value[len("Brazales ") :]
+        elif value == "Brazales":
+            value = "Armadura de brazos"
+
+    if "traje interior" in value.casefold() or "armadura de brazos" in value.casefold():
+        value = value.rstrip()
+
+    return value
+
+
 def main() -> int:
     if len(sys.argv) != 3:
         raise SystemExit(__doc__)
@@ -211,7 +275,9 @@ def main() -> int:
                 new_value = CONTEXT_OVERRIDES[key].rstrip()
                 terminology_changes += new_value != value
             else:
-                new_value = normalize_salvage(value)
+                new_value = normalize_clothing(key, normalize_salvage(value))
+                if new_value != value:
+                    new_value = new_value.rstrip()
                 terminology_changes += new_value != value
             line = f"{raw_key}={new_value}"
         output.append(line)

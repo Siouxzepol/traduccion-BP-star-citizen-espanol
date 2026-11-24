@@ -22,6 +22,10 @@ def main() -> int:
     for key, value in spanish.items():
         if "salvamento" in value.casefold():
             errors.append(f"{key}: conserva la palabra 'salvamento'")
+        if "sototraje" in value.casefold():
+            errors.append(f"{key}: conserva la palabra 'sototraje'")
+        if "brazales" in value.casefold():
+            errors.append(f"{key}: conserva la palabra ambigua 'brazales'")
         if is_ship_ui(key) and key in english and value.rstrip() != english[key].rstrip():
             errors.append(f"{key}: el rótulo compacto no coincide con el inglés")
 
@@ -33,8 +37,8 @@ def main() -> int:
 
     protected = sum(1 for key in spanish if is_ship_ui(key) and key in english)
     print(
-        f"OK: no queda 'salvamento' y {protected} rótulos compactos de nave "
-        "se conservan en inglés."
+        f"OK: no quedan 'salvamento', 'sototraje' ni 'brazales'; {protected} "
+        "rótulos compactos de nave se conservan en inglés."
     )
     return 0
 
