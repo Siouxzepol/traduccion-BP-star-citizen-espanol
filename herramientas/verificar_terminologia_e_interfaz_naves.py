@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Verifica la terminología de chatarrería y la interfaz compacta de naves."""
+"""Verifica la terminología y separa pilotaje de interiores de nave."""
 
 from __future__ import annotations
 
 from pathlib import Path
 import sys
 
-from aplicar_terminologia_e_interfaz_naves import is_ship_ui, load
+from aplicar_terminologia_e_interfaz_naves import is_pilot_ui, is_ship_ui, load
 
 
 EXPECTED_BODY_LABELS = {
@@ -35,6 +35,29 @@ EXPECTED_BODY_LABELS = {
     "ui_inventory_filter_category_name_undersuits": "Undersuits",
 }
 
+EXPECTED_SHIP_UI_SPANISH = {
+    "interaction_open_storage": "Abrir almacenamiento",
+    "ui_interactor_close_door": "Cerrar puerta",
+    "ui_interactor_open_door": "Abrir puerta",
+    "ui_interactor_use_door": "Usar puerta",
+    "vehicle_room_airlock": "Esclusa",
+    "vehicle_deck_command": "Cubierta de mando",
+    "vehicle_deck_main": "Cubierta principal",
+    "vehicle_deck_upper": "Cubierta superior",
+    "vehicle_room_bathroom": "Aseo",
+    "vehicle_room_battle_stations": "Puestos de combate",
+    "vehicle_room_captain": "Camarote del capitán",
+    "vehicle_room_elevator_rear": "Ascensor trasero",
+    "vehicle_room_elevator_shaft": "Hueco del ascensor",
+    "vehicle_room_engineering": "Ingeniería",
+    "vehicle_room_engineering_bottom": "Ingeniería inferior",
+    "vehicle_room_engineering_top": "Ingeniería superior",
+    "vehicle_room_neck": "Pasillo",
+    "vehicle_room_turret": "Acceso a la torreta",
+    "vehicle_deck_lower_corridor": "Corredor inferior",
+    "vehicle_deck_upper_corridor": "Corredor superior",
+}
+
 
 def main() -> int:
     if len(sys.argv) != 3:
@@ -50,6 +73,10 @@ def main() -> int:
         if spanish.get(key) != expected:
             errors.append(f"{key}: se esperaba {expected!r}, no {spanish.get(key)!r}")
 
+    for key, expected in EXPECTED_SHIP_UI_SPANISH.items():
+        if spanish.get(key) != expected:
+            errors.append(f"{key}: se esperaba {expected!r}, no {spanish.get(key)!r}")
+
     for key, value in spanish.items():
         if "salvamento" in value.casefold():
             errors.append(f"{key}: conserva la palabra 'salvamento'")
@@ -62,8 +89,27 @@ def main() -> int:
         if key.casefold().startswith("item_") and "name" in key.casefold():
             if value.startswith(("Armadura de brazos ", "Coraza ", "Perneras ")):
                 errors.append(f"{key}: conserva un nombre de parte largo o antiguo")
-        if is_ship_ui(key) and key in english and value.rstrip() != english[key].rstrip():
-            errors.append(f"{key}: el rótulo compacto no coincide con el inglés")
+    pilot_ui_keys = [key for key in spanish if is_pilot_ui(key) and key in english]
+    pilot_not_english = [
+        key
+        for key in pilot_ui_keys
+        if spanish[key].rstrip() != english[key].rstrip()
+    ]
+    for key in pilot_not_english:
+        errors.append(f"{key}: la interfaz de pilotaje no conserva el inglés")
+
+    ship_ui_keys = [
+        key
+        for key in spanish
+        if is_ship_ui(key) and not is_pilot_ui(key) and key in english
+    ]
+    localized = sum(
+        spanish[key].rstrip() != english[key].rstrip() for key in ship_ui_keys
+    )
+    if localized < 600:
+        errors.append(
+            f"solo {localized} rótulos internos están traducidos; se esperaban al menos 600"
+        )
 
     if errors:
         print(f"ERROR: {len(errors)} problemas de terminología o interfaz:")
@@ -71,11 +117,11 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    protected = sum(1 for key in spanish if is_ship_ui(key) and key in english)
     print(
         f"OK: no quedan 'salvamento', 'sototraje', 'traje interior' ni "
-        f"'brazales'; {protected} "
-        "rótulos compactos de nave se conservan en inglés."
+        f"'brazales'; {localized} de {len(ship_ui_keys)} rótulos internos de "
+        f"nave están traducidos al español y {len(pilot_ui_keys)} claves del "
+        "HUD/MFD/mandos de pilotaje se conservan en inglés."
     )
     return 0
 

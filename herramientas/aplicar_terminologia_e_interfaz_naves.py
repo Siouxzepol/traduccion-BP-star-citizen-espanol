@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Normaliza «salvage» y protege en inglés la interfaz compacta de naves.
+"""Normaliza la terminología y limita el inglés a la interfaz de pilotaje.
 
 Uso:
     python herramientas/aplicar_terminologia_e_interfaz_naves.py GLOBAL_ES GLOBAL_EN
@@ -29,6 +29,19 @@ SHIP_UI_KEYS = {
     "innerthought_idris_bridge_lift_main_deck",
 }
 
+# Solo estas familias pertenecen a la interfaz compacta que se muestra al
+# pilotar: HUD de vuelo/artillería/quantum, MFD y mandos de la cabina. No se
+# incluyen ``ui_interactor_`` ni los rótulos de habitaciones, puertas o
+# ascensores, que deben permanecer en español.
+PILOT_UI_PREFIXES = (
+    "flightHUD_",
+    "vehicle_gunnery_hud_",
+    "quantum_hud_",
+    "vehicle_interactor_",
+    "mfd_",
+    "ui_mfd_",
+)
+
 
 # Correcciones de contexto que una sustitución literal no puede resolver.
 # Se aplican a ambas ramas para que LIVE y PTU mantengan la misma terminología.
@@ -38,6 +51,40 @@ CONTEXT_OVERRIDES = {
     "mission_location_stanton_0310": "una chatarrería en Wala",
     "mission_location_stanton_0428": "una chatarrería en Euterpe",
     "items_commodities_ConstructionMaterialsChunks": "Construction Salvage",
+    "vehicle_deck_command": "Cubierta de mando",
+    "vehicle_deck_front": "Cubierta delantera",
+    "vehicle_deck_lower": "Cubierta inferior",
+    "vehicle_deck_lower_cargo": "Cubierta de carga inferior",
+    "vehicle_deck_main": "Cubierta principal",
+    "vehicle_deck_sub_deck": "Subcubierta",
+    "vehicle_deck_upper": "Cubierta superior",
+    "vehicle_deck_upper_cargo": "Cubierta de carga superior",
+    "vehicle_room_armory": "Armería",
+    "vehicle_room_battle_stations": "Puestos de combate",
+    "vehicle_room_briefing": "Sala de reuniones",
+    "vehicle_room_captain": "Camarote del capitán",
+    "vehicle_room_component_access": "Acceso a componentes",
+    "vehicle_room_crew": "Camarotes de la tripulación",
+    "vehicle_room_drones": "Hangar de drones",
+    "vehicle_room_elevator_rear": "Ascensor trasero",
+    "vehicle_room_elevator_shaft": "Hueco del ascensor",
+    "vehicle_room_escapepods": "Cápsulas de escape",
+    "vehicle_room_escaperaft": "Balsa de escape",
+    "vehicle_room_guard": "Puesto de guardia",
+    "vehicle_room_hottub": "Bañera de hidromasaje",
+    "vehicle_room_lower_cargo_bay": "Bodega de carga inferior",
+    "vehicle_room_messhall": "Comedor",
+    "vehicle_room_operations_deck": "Cubierta de operaciones",
+    "vehicle_room_owners_room": "Camarote del propietario",
+    "vehicle_room_passenger_quarters": "Camarotes de pasajeros",
+    "vehicle_room_passenger_seating": "Asientos de pasajeros",
+    "vehicle_room_repair_bay": "Bahía de reparaciones",
+    "vehicle_room_salvage": "Estación de desguace",
+    "vehicle_room_scanning": "Sala de escaneo",
+    "vehicle_room_shooting_range": "Galería de tiro",
+    "vehicle_room_tractor_control": "Control del rayo tractor",
+    "vehicle_room_turret": "Acceso a la torreta",
+    "vehicle_room_vehicle_bay": "Hangar de vehículos",
     "itemPort_Armor_Arms": "Brazos",
     "itemPort_Armor_Helmet": "Casco",
     "itemPort_Armor_Legs": "Piernas",
@@ -202,6 +249,11 @@ def is_ship_ui(key: str) -> bool:
     return key.startswith(SHIP_UI_PREFIXES) or key in SHIP_UI_KEYS
 
 
+def is_pilot_ui(key: str) -> bool:
+    folded = key.casefold()
+    return folded.startswith(tuple(prefix.casefold() for prefix in PILOT_UI_PREFIXES))
+
+
 def normalize_salvage(value: str) -> str:
     value = value.replace("Salvamento", "Chatarrería")
     value = value.replace("salvamento", "chatarrería")
@@ -289,6 +341,8 @@ def main() -> int:
 
     spanish_path = Path(sys.argv[1])
     english_path = Path(sys.argv[2])
+    if not english_path.is_file():
+        raise SystemExit(f"No existe el catálogo inglés: {english_path}")
     english = load(english_path)
 
     raw = spanish_path.read_bytes()
@@ -296,18 +350,16 @@ def main() -> int:
     text = raw[3:].decode("utf-8") if bom else raw.decode("utf-8")
     newline = "\r\n" if "\r\n" in text else "\n"
     output: list[str] = []
-    ship_ui_changes = 0
     terminology_changes = 0
+    pilot_ui_changes = 0
 
     for line in text.splitlines():
         if "=" in line and not line.startswith((";", "[")):
             raw_key, value = line.split("=", 1)
             key = normalize(raw_key)
-            if is_ship_ui(key) and key in english:
-                # Los espacios finales del original no tienen valor visual y
-                # generan diffs frágiles entre parches.
+            if is_pilot_ui(key) and key in english:
                 new_value = english[key].rstrip()
-                ship_ui_changes += new_value != value
+                pilot_ui_changes += new_value != value
             elif key in CONTEXT_OVERRIDES:
                 new_value = CONTEXT_OVERRIDES[key].rstrip()
                 terminology_changes += new_value != value
@@ -321,8 +373,8 @@ def main() -> int:
 
     encoded = (newline.join(output) + newline).encode("utf-8")
     spanish_path.write_bytes((b"\xef\xbb\xbf" if bom else b"") + encoded)
-    print(f"Interfaz de nave restaurada al inglés: {ship_ui_changes}")
     print(f"Entradas con terminología corregida: {terminology_changes}")
+    print(f"Entradas de pilotaje conservadas en inglés: {pilot_ui_changes}")
     return 0
 
 

@@ -95,7 +95,7 @@ def main() -> int:
         "hmd_OptionsWheelAttachMode": "[Experimental] RV - Menú radial fijo",
         "hmd_OptionsWheelScale": "[Experimental] RV - Escala del menú radial",
         "Starchitect_Location_Archtype_RemoteLocation_0001": "Unoccupied Territory",
-        "vehicle_room_battle_stations": "Battle Stations",
+        "vehicle_room_battle_stations": "Puestos de combate",
     }
     for key, value in expected.items():
         if spanish.get(key) != value:
