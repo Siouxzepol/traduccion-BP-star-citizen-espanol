@@ -58,6 +58,16 @@ EXPECTED_SHIP_UI_SPANISH = {
     "vehicle_deck_upper_corridor": "Corredor superior",
 }
 
+for _docking_port_number in range(1, 21):
+    _docking_port_suffix = f"{_docking_port_number:02d}"
+    _docking_port_label = f"Puerto Dock {_docking_port_suffix}"
+    EXPECTED_SHIP_UI_SPANISH[
+        f"dockingport_{_docking_port_suffix}"
+    ] = _docking_port_label
+    EXPECTED_SHIP_UI_SPANISH[
+        f"ui_interactor_dockingport_{_docking_port_suffix}"
+    ] = _docking_port_label
+
 
 def main() -> int:
     if len(sys.argv) != 3:

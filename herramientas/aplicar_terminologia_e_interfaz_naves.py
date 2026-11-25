@@ -46,6 +46,21 @@ PILOT_UI_PREFIXES = (
 # Correcciones de contexto que una sustitución literal no puede resolver.
 # Se aplican a ambas ramas para que LIVE y PTU mantengan la misma terminología.
 CONTEXT_OVERRIDES = {
+    "Hockrow_DownloadSingle_Desc_001": (
+        "Hockrow Agency \\nExpediente n.º DLD22076\\n"
+        "Investigador principal: Arken Mallor\\n\\nResumen del caso: \\n"
+        "Buscamos a alguien capaz de realizar una operación de recuperación en "
+        "dos ubicaciones. Es un contrato exigente que requiere infiltrarse en "
+        "instalaciones separadas, pero el cliente está deseando recuperar los "
+        "objetos y la remuneración lo refleja.\\n\\nAcciones del investigador "
+        "contratado:\\nPon rumbo a <EM4>~mission(Location01|Address)</EM4> y "
+        "<EM4>~mission(Location02|Address)</EM4>, y recupera los objetos de los "
+        "almacenes de ambas zonas. Entrégalos en "
+        "<EM4>~mission(Destination|Target|Address)</EM4>.\\n\\nNotas adicionales:"
+        "\\nNo disponemos de información sobre el nivel de seguridad que "
+        "encontrarás, así que toma todas las precauciones razonables para evitar "
+        "que te detecten o capturen."
+    ),
     "mission_location_stanton_0304": "una chatarrería en Hurston",
     "mission_location_stanton_0307": "una chatarrería en Daymar",
     "mission_location_stanton_0310": "una chatarrería en Wala",
@@ -223,6 +238,17 @@ CONTEXT_OVERRIDES = {
         "como más material aprovechable.\\n\\n- Humble"
     ),
 }
+
+# Estos rótulos aparecen en paneles físicos muy estrechos. «Puerto de atraque
+# 01» se recorta, mientras que «Puerto Dock 01» conserva el significado y cabe
+# en el mismo espacio que el original «Docking Port 01».
+for _docking_port_number in range(1, 21):
+    _docking_port_suffix = f"{_docking_port_number:02d}"
+    _docking_port_label = f"Puerto Dock {_docking_port_suffix}"
+    CONTEXT_OVERRIDES[f"dockingport_{_docking_port_suffix}"] = _docking_port_label
+    CONTEXT_OVERRIDES[
+        f"ui_interactor_dockingport_{_docking_port_suffix}"
+    ] = _docking_port_label
 
 
 def normalize(key: str) -> str:
